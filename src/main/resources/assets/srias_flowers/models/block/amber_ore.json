@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "srias_flowers:blocks/amber_ore",
+    "up": "srias_flowers:blocks/amber_ore",
+    "north": "srias_flowers:blocks/amber_ore",
+    "east": "srias_flowers:blocks/amber_ore",
+    "south": "srias_flowers:blocks/amber_ore",
+    "west": "srias_flowers:blocks/amber_ore",
+    "particle": "srias_flowers:blocks/amber_ore"
+  }
+}

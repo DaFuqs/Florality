@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "srias_flowers:block/bird_of_paradise"
+    },
+    "half=lower": {
+      "model": "srias_flowers:block/bird_of_paradise_bottom"
+    }
+  }
+}

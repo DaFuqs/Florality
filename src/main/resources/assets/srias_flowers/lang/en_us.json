@@ -1,0 +1,35 @@
+{
+  "itemGroup.srias_flowers.sierras_flowers": "Sierra\u0027s Flowers",
+
+  "block.srias_flowers.fleabane": "Fleabane",
+  "block.srias_flowers.sunrise_daisy": "Sunrise Daisy",
+  "block.srias_flowers.seeding_dandelion": "Seeding Dandelion",
+  "block.srias_flowers.amber_block": "Amber Block",
+  "block.srias_flowers.blue_hydrangea": "Blue Hydrangea",
+  "block.srias_flowers.purple_hydrangea": "Pink Hydrangea",
+  "block.srias_flowers.aloe_vera": "Aloe Vera",
+  "block.srias_flowers.dune_grass": "Dune Grass",
+  "block.srias_flowers.pink_hydrangea": "Purple Hydrangea",
+  "block.srias_flowers.columbine": "Columbine",
+  "block.srias_flowers.obama_plant": "Obama Plant",
+  "block.srias_flowers.amber_ore": "Amber Ore",
+  "block.srias_flowers.bird_of_paradise": "Bird Of Paradise",
+  "block.srias_flowers.deepslate_amber_ore": "Deepslate Amber Ore",
+  "block.srias_flowers.himalayan_poppy": "Himalayan Poppy",
+
+  "item.srias_flowers.preserved_fern": "Preserved Fern",
+  "item.srias_flowers.amber_ingot": "Amber Ingot",
+
+  "advancements.not_honey.descr": "Break and obtain an Amber ingot",
+  "advancements.skin_remedy.title": "Skin Remedy",
+  "advancements.skin_remedy.descr": "As long as you take the thorns out of the Aloe Vera before using it!",
+  "advancements.mysterious_fossil.title": "Mysterious Fossil",
+  "advancements.it_looks_like_a_bird.descr": "Find an exotic Bird of Paradise flower deep in the rainforest.",
+  "advancements.it_looks_like_a_bird.title": "A Flower That Looks Like a Bird?",
+  "advancements.sierras_flowers_advancement.title": "Sierra\u0027s Flowers",
+  "advancements.you_cant_blow_it.title": "You Can\u0027t Blow It!",
+  "advancements.mysterious_fossil.descr": "Obtain a Preserved Fern.",
+  "advancements.you_cant_blow_it.descr": "Obtain a seeding dandelion",
+  "advancements.not_honey.title": "It\u0027s Not Honey",
+  "advancements.sierras_flowers_advancement.descr": "Explore the fascinating wonders of flowers!"
+}

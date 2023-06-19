@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "srias_flowers:himalayan_poppy"
+    }
+  ],
+  "result": {
+    "item": "minecraft:light_blue_dye",
+    "count": 1
+  }
+}

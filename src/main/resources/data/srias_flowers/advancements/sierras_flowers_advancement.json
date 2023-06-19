@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "srias_flowers:blue_hydrangea"
+    },
+    "title": {
+      "translate": "advancements.sierras_flowers_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.sierras_flowers_advancement.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "sierras_flowers_advancement": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "minecraft:overworld"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "srias_flowers",
+  "version": "${version}",
+
+  "name": "Sierra's Flowers",
+  "description": "Simple Minecraft mod that brings new floral features to the overworld, as well as adding a new ore!",
+  "authors": [
+    "Sierra"
+  ],
+  "contact": {
+    "repo": "https://github.com/DaFuqs/srias_flowers"
+  },
+  "license": "Academic Free License v3.0",
+  "icon": "assets/srias_flowers/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.sria.srias_flowers.client.SriasFlowersClient"
+    ],
+    "main": [
+      "me.sria.srias_flowers.SriasFlowers"
+    ]
+  },
+  "mixins": [
+    "sriasflowers.mixins.json"
+  ],
+  "depends": {
+    "minecraft": ">=1.19.2",
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*"
+  }
+}
