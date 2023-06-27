@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "srias_flowers:blocks/blue_hydrangea",
-    "particle": "srias_flowers:blocks/blue_hydrangea"
+    "cross": "srias_flowers:block/blue_hydrangea",
+    "particle": "srias_flowers:block/blue_hydrangea"
   }
 }

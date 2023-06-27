@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "srias_flowers:blocks/pink_hydrangea"
+    "layer0": "srias_flowers:block/pink_hydrangea"
   }
 }

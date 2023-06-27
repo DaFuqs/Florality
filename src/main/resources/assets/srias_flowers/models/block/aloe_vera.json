@@ -1,7 +1,7 @@
 {
   "parent": "block/cross",
   "textures": {
-    "cross": "srias_flowers:blocks/aloe_vera",
-    "particle": "srias_flowers:blocks/aloe_vera"
+    "cross": "srias_flowers:block/aloe_vera",
+    "particle": "srias_flowers:block/aloe_vera"
   }
 }
