@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "srias_flowers:block/white_blossom_sapling"
+  }
+}

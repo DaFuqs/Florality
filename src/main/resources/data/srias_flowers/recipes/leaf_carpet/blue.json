@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "leaf_carpet",
+  "key": {
+    "#": {
+      "item": "srias_flowers:blue_blossom_leaves"
+    }
+  },
+  "pattern": [
+    "##"
+  ],
+  "result": {
+    "count": 3,
+    "item": "srias_flowers:blue_blossom_carpet"
+  }
+}

@@ -7,17 +7,72 @@ import net.fabricmc.fabric.api.item.v1.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.*;
 import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.block.*;
+import net.minecraft.block.sapling.*;
 import net.minecraft.client.render.*;
 import net.minecraft.entity.effect.*;
 import net.minecraft.item.*;
+import net.minecraft.sound.*;
+import net.minecraft.util.math.intprovider.*;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.registry.*;
+import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.*;
+import net.minecraft.world.gen.foliage.*;
+import net.minecraft.world.gen.stateprovider.*;
+import net.minecraft.world.gen.trunk.*;
+import org.jetbrains.annotations.*;
+
+import java.util.*;
 
 public class SriasBlocks {
 	
+	public static List<WoodSet> WOOD_SETS = new ArrayList<>() {{
+		add(new WoodSet("white_blossom", MapColor.WHITE_GRAY));
+		add(new WoodSet("blue_blossom", MapColor.WATER_BLUE));
+		add(new WoodSet("purple_blossom", MapColor.TERRACOTTA_PURPLE));
+	}};
+	
+	public static class WoodSet {
+		
+		private final String name;
+		private final MapColor mapColor;
+		
+		private Block SAPLING;
+		private Block LEAVES;
+		private Block LEAF_CARPET;
+		
+		public WoodSet(String name, MapColor mapColor) {
+			this.name = name;
+			this.mapColor = mapColor;
+		}
+		
+		private static TreeFeatureConfig treeFeature(Block log, Block leaves) {
+			return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new LargeOakTrunkPlacer(3, 11, 0), BlockStateProvider.of(leaves), new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines().build();
+		}
+		
+		public void register() {
+			this.LEAVES = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
+			this.LEAF_CARPET = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
+			
+			RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TREE_FEATURE_KEY = ConfiguredFeatures.register(name + "_tree", Feature.TREE, treeFeature(Blocks.OAK_LOG, LEAVES));
+			SaplingGenerator SAPLING_GENERATOR = new SaplingGenerator() {
+				@Nullable
+				@Override
+				protected RegistryEntry<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
+					return TREE_FEATURE_KEY;
+				}
+			};
+			
+			this.SAPLING = registerBlockWithBlockItem(name + "_sapling", new SaplingBlock(SAPLING_GENERATOR, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(mapColor)));
+		}
+		
+		public void registerClient() {
+			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), LEAF_CARPET);
+		}
+	}
+	
 	private static final AbstractBlock.Settings FLOWER_SETTINGS = FabricBlockSettings.copyOf(Blocks.POPPY);
-	public static final Block COLUMBINE = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
 	public static final Block SUNRISE_DAISY = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
-	public static final Block BIRD_OF_PARADISE = new TallFlowerBlock(FLOWER_SETTINGS);
 	public static final Block HIMALAYAN_POPPY = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
 	public static final Block BLUE_HYDRANGEA = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
 	public static final Block PINK_HYDRANGEA = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
@@ -29,7 +84,6 @@ public class SriasBlocks {
 	public static final Block OBAMA_PLANT = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
 	
 	private static final AbstractBlock.Settings POTTED_PLANT_SETTINGS = FabricBlockSettings.copyOf(Blocks.POTTED_POPPY);
-	public static final Block POTTED_COLUMBINE = new FlowerPotBlock(COLUMBINE, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_SUNRISE_DAISY = new FlowerPotBlock(SUNRISE_DAISY, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_HIMALAYAN_POPPY = new FlowerPotBlock(HIMALAYAN_POPPY, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_BLUE_HYDRANGEA = new FlowerPotBlock(BLUE_HYDRANGEA, POTTED_PLANT_SETTINGS);
@@ -41,9 +95,11 @@ public class SriasBlocks {
 	public static final Block POTTED_OBAMA_PLANT = new FlowerPotBlock(OBAMA_PLANT, POTTED_PLANT_SETTINGS);
 	
 	public static void register() {
-		registerBlockWithBlockItem("columbine", COLUMBINE);
+		for(WoodSet woodSet : WOOD_SETS) {
+			woodSet.register();
+		}
+		
 		registerBlockWithBlockItem("sunrise_daisy", SUNRISE_DAISY);
-		registerBlockWithBlockItem("bird_of_paradise", BIRD_OF_PARADISE);
 		registerBlockWithBlockItem("himalayan_poppy", HIMALAYAN_POPPY);
 		registerBlockWithBlockItem("blue_hydrangea", BLUE_HYDRANGEA);
 		registerBlockWithBlockItem("pink_hydrangea", PINK_HYDRANGEA);
@@ -54,7 +110,6 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
 		registerBlockWithBlockItem("obama_plant", OBAMA_PLANT);
 		
-		registerBlock("potted_columbine", POTTED_COLUMBINE);
 		registerBlock("potted_sunrise_daisy", POTTED_SUNRISE_DAISY);
 		registerBlock("potted_himalayan_poppy", POTTED_HIMALAYAN_POPPY);
 		registerBlock("potted_blue_hydrangea", POTTED_BLUE_HYDRANGEA);
@@ -66,9 +121,10 @@ public class SriasBlocks {
 		registerBlock("potted_obama_plant", POTTED_OBAMA_PLANT);
 	}
 	
-	static void registerBlockWithBlockItem(String name, Block block) {
-		Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
+	static Block registerBlockWithBlockItem(String name, Block block) {
+		Block b = Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
 		Registry.register(Registry.ITEM, SriasFlowers.id(name), new BlockItem(block, new FabricItemSettings().group(SriasItemGroups.ITEM_GROUP)));
+		return b;
 	}
 	
 	static void registerBlock(String name, Block block) {
@@ -77,21 +133,23 @@ public class SriasBlocks {
 	
 	@Environment(EnvType.CLIENT)
 	public static void registerClient() {
+		for(WoodSet woodSet : WOOD_SETS) {
+			woodSet.registerClient();
+		}
+		
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
-				COLUMBINE, SUNRISE_DAISY, BIRD_OF_PARADISE, HIMALAYAN_POPPY,
+				SUNRISE_DAISY, HIMALAYAN_POPPY,
 				BLUE_HYDRANGEA, PINK_HYDRANGEA, PURPLE_HYDRANGEA, SEEDING_DANDELION,
 				FLEABANE, DUNE_GRASS, ALOE_VERA,
 				
-				POTTED_COLUMBINE, POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY,
+				POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY,
 				POTTED_BLUE_HYDRANGEA, POTTED_PINK_HYDRANGEA, POTTED_PURPLE_HYDRANGEA, POTTED_SEEDING_DANDELION,
 				POTTED_FLEABANE, POTTED_ALOE_VERA
 		);
 	}
 	
 	public static void registerFlammableBlocks() {
-		FlammableBlockRegistry.getDefaultInstance().add(COLUMBINE, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(SUNRISE_DAISY, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(BIRD_OF_PARADISE, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(HIMALAYAN_POPPY, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(BLUE_HYDRANGEA, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(PINK_HYDRANGEA, 60, 100);
