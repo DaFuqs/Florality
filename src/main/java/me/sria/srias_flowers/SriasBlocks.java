@@ -1,6 +1,7 @@
 package me.sria.srias_flowers;
 
 import me.sria.srias_flowers.blocks.*;
+import me.sria.srias_flowers.items.*;
 import net.fabricmc.api.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
 import net.fabricmc.fabric.api.item.v1.*;
@@ -104,7 +105,7 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("blue_hydrangea", BLUE_HYDRANGEA);
 		registerBlockWithBlockItem("pink_hydrangea", PINK_HYDRANGEA);
 		registerBlockWithBlockItem("purple_hydrangea", PURPLE_HYDRANGEA);
-		registerBlockWithBlockItem("seeding_dandelion", SEEDING_DANDELION);
+		registerBlockWithBlockItem("seeding_dandelion", SEEDING_DANDELION, new SeedingDandelionItem(SEEDING_DANDELION, new FabricItemSettings().group(SriasItemGroups.ITEM_GROUP)));
 		registerBlockWithBlockItem("fleabane", FLEABANE);
 		registerBlockWithBlockItem("dune_grass", DUNE_GRASS);
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
@@ -124,6 +125,12 @@ public class SriasBlocks {
 	static Block registerBlockWithBlockItem(String name, Block block) {
 		Block b = Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
 		Registry.register(Registry.ITEM, SriasFlowers.id(name), new BlockItem(block, new FabricItemSettings().group(SriasItemGroups.ITEM_GROUP)));
+		return b;
+	}
+	
+	static Block registerBlockWithBlockItem(String name, Block block, BlockItem blockItem) {
+		Block b = Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
+		Registry.register(Registry.ITEM, SriasFlowers.id(name), blockItem);
 		return b;
 	}
 	
