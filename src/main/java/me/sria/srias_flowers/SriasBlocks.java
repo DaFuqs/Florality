@@ -2,6 +2,7 @@ package me.sria.srias_flowers;
 
 import me.sria.srias_flowers.blocks.*;
 import me.sria.srias_flowers.items.*;
+import me.sria.srias_flowers.tree_decorators.*;
 import net.fabricmc.api.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
 import net.fabricmc.fabric.api.item.v1.*;
