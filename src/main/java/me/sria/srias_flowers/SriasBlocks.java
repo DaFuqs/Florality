@@ -20,6 +20,7 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.*;
 import net.minecraft.world.gen.foliage.*;
 import net.minecraft.world.gen.stateprovider.*;
+import net.minecraft.world.gen.treedecorator.*;
 import net.minecraft.world.gen.trunk.*;
 import org.jetbrains.annotations.*;
 
@@ -47,15 +48,16 @@ public class SriasBlocks {
 			this.mapColor = mapColor;
 		}
 		
-		private static TreeFeatureConfig treeFeature(Block log, Block leaves) {
-			return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new LargeOakTrunkPlacer(3, 11, 0), BlockStateProvider.of(leaves), new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).ignoreVines().build();
+		private static TreeFeatureConfig treeFeature(Block log, Block leaves, Block leafCarpet) {
+			TreeDecorator leafCarpetDecorator = new LeafCarpetTreeDecorator(BlockStateProvider.of(leafCarpet));
+			return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new LargeOakTrunkPlacer(3, 11, 0), BlockStateProvider.of(leaves), new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).decorators(List.of(leafCarpetDecorator)).ignoreVines().build();
 		}
 		
 		public void register() {
 			this.LEAVES = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
 			this.LEAF_CARPET = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
 			
-			RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TREE_FEATURE_KEY = ConfiguredFeatures.register(name + "_tree", Feature.TREE, treeFeature(Blocks.OAK_LOG, LEAVES));
+			RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TREE_FEATURE_KEY = ConfiguredFeatures.register(name + "_tree", Feature.TREE, treeFeature(Blocks.OAK_LOG, LEAVES, LEAF_CARPET));
 			SaplingGenerator SAPLING_GENERATOR = new SaplingGenerator() {
 				@Nullable
 				@Override
@@ -96,6 +98,8 @@ public class SriasBlocks {
 	public static final Block POTTED_OBAMA_PLANT = new FlowerPotBlock(OBAMA_PLANT, POTTED_PLANT_SETTINGS);
 	
 	public static void register() {
+		SriasTreeDecorators.register();
+		
 		for(WoodSet woodSet : WOOD_SETS) {
 			woodSet.register();
 		}
