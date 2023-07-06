@@ -16,18 +16,6 @@
                 "data": {
                   "Name": "srias_flowers:blue_hydrangea"
                 }
-              },
-              {
-                "weight": 1,
-                "data": {
-                  "Name": "srias_flowers:pink_hydrangea"
-                }
-              },
-              {
-                "weight": 1,
-                "data": {
-                  "Name": "srias_flowers:purple_hydrangea"
-                }
               }
             ]
           }

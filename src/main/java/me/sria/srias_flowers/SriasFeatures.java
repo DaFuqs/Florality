@@ -12,7 +12,7 @@ public class SriasFeatures {
 	
 	public static RegistryKey<PlacedFeature> SUNRISE_DAISY = RegistryKey.of(Registry.PLACED_FEATURE_KEY, SriasFlowers.id("sunrise_daisy"));
 	public static RegistryKey<PlacedFeature> HIMALAYAN_POPPY = RegistryKey.of(Registry.PLACED_FEATURE_KEY, SriasFlowers.id("himalayan_poppy"));
-	public static RegistryKey<PlacedFeature> HYDRANGEA = RegistryKey.of(Registry.PLACED_FEATURE_KEY, SriasFlowers.id("hydrangea"));
+	public static RegistryKey<PlacedFeature> BLUE_HYDRANGEA = RegistryKey.of(Registry.PLACED_FEATURE_KEY, SriasFlowers.id("blue_hydrangea"));
 	public static RegistryKey<PlacedFeature> SEEDING_DANDELION = RegistryKey.of(Registry.PLACED_FEATURE_KEY, SriasFlowers.id("seeding_dandelion"));
 	public static RegistryKey<PlacedFeature> FLEABANE = RegistryKey.of(Registry.PLACED_FEATURE_KEY, SriasFlowers.id("fleabane"));
 	public static RegistryKey<PlacedFeature> DUNE_GRASS = RegistryKey.of(Registry.PLACED_FEATURE_KEY, SriasFlowers.id("dune_grass"));
@@ -24,7 +24,7 @@ public class SriasFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT), GenerationStep.Feature.VEGETAL_DECORATION, DUNE_GRASS);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, HYDRANGEA);
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_HYDRANGEA);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SEEDING_DANDELION);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT), GenerationStep.Feature.VEGETAL_DECORATION, ALOE_VERA);
 	}
