@@ -71,7 +71,7 @@ public class SriasBlocks {
 		}
 		
 		public void registerClient() {
-			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), LEAF_CARPET);
+			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), LEAF_CARPET, SAPLING);
 		}
 	}
 	
