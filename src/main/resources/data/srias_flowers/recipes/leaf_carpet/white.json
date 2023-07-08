@@ -3,7 +3,7 @@
   "group": "leaf_carpet",
   "key": {
     "#": {
-      "item": "srias_flowers:white_blossom_leaves"
+      "item": "srias_flowers:dogwood_leaves"
     }
   },
   "pattern": [
@@ -11,6 +11,6 @@
   ],
   "result": {
     "count": 3,
-    "item": "srias_flowers:white_blossom_carpet"
+    "item": "srias_flowers:dogwood_carpet"
   }
 }

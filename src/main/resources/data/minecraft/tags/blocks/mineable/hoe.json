@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "srias_flowers:blue_blossom_leaves",
-    "srias_flowers:purple_blossom_leaves",
-    "srias_flowers:white_blossom_leaves",
-    "srias_flowers:blue_blossom_carpet",
-    "srias_flowers:purple_blossom_carpet",
-    "srias_flowers:white_blossom_carpet"
+    "srias_flowers:blue_wisteria_leaves",
+    "srias_flowers:purple_wisteria_leaves",
+    "srias_flowers:dogwood_leaves",
+    "srias_flowers:blue_wisteria_carpet",
+    "srias_flowers:purple_wisteria_carpet",
+    "srias_flowers:dogwood_carpet"
   ]
 }

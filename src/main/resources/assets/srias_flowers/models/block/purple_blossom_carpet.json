@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/carpet",
-  "textures": {
-    "wool": "srias_flowers:block/purple_blossom_leaves"
-  }
-}

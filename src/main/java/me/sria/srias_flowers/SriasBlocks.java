@@ -30,9 +30,9 @@ import java.util.*;
 public class SriasBlocks {
 	
 	public static List<WoodSet> WOOD_SETS = new ArrayList<>() {{
-		add(new WoodSet("white_blossom", MapColor.WHITE_GRAY));
-		add(new WoodSet("blue_blossom", MapColor.WATER_BLUE));
-		add(new WoodSet("purple_blossom", MapColor.TERRACOTTA_PURPLE));
+		add(new WoodSet("dogwood", MapColor.WHITE_GRAY));
+		add(new WoodSet("blue_wisteria", MapColor.WATER_BLUE));
+		add(new WoodSet("purple_wisteria", MapColor.TERRACOTTA_PURPLE));
 	}};
 	
 	public static class WoodSet {

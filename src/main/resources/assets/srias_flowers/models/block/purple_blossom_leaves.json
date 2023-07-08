@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/leaves",
-  "textures": {
-    "all": "srias_flowers:block/purple_blossom_leaves"
-  }
-}

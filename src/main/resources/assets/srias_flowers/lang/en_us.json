@@ -1,15 +1,15 @@
 {
   "itemGroup.srias_flowers.srias_flowers": "Sierra\u0027s Flowers",
 
-  "block.srias_flowers.white_blossom_sapling": "White Blossom Sapling",
-  "block.srias_flowers.white_blossom_carpet": "White Blossom Carpet",
-  "block.srias_flowers.white_blossom_leaves": "White Blossom Leaves",
-  "block.srias_flowers.blue_blossom_sapling": "Blue Blossom Sapling",
-  "block.srias_flowers.blue_blossom_carpet": "Blue Blossom Carpet",
-  "block.srias_flowers.blue_blossom_leaves": "Blue Blossom Leaves",
-  "block.srias_flowers.purple_blossom_sapling": "Purple Blossom Sapling",
-  "block.srias_flowers.purple_blossom_carpet": "Purple Blossom Carpet",
-  "block.srias_flowers.purple_blossom_leaves": "Purple Blossom Leaves",
+  "block.srias_flowers.dogwood_sapling": "Digwood Sapling",
+  "block.srias_flowers.dogwood_carpet": "Digwood Carpet",
+  "block.srias_flowers.dogwood_leaves": "Digwood Leaves",
+  "block.srias_flowers.blue_wisteria_sapling": "Blue Wisteria Sapling",
+  "block.srias_flowers.blue_wisteria_carpet": "Blue Wisteria Carpet",
+  "block.srias_flowers.blue_wisteria_leaves": "Blue Wisteria Leaves",
+  "block.srias_flowers.purple_wisteria_sapling": "Purple Wisteria Sapling",
+  "block.srias_flowers.purple_wisteria_carpet": "Purple Wisteria Carpet",
+  "block.srias_flowers.purple_wisteria_leaves": "Purple Wisteria Leaves",
 
   "block.srias_flowers.fleabane": "Fleabane",
   "block.srias_flowers.sunrise_daisy": "Sunrise Daisy",
@@ -28,11 +28,12 @@
   "block.srias_flowers.potted_obama_plant": "Potted Obama Plant",
   "block.srias_flowers.potted_himalayan_poppy": "Potted Himalayan Poppy",
 
+  "advancements.sierras_flowers_advancement.title": "Sierra\u0027s Flowers",
+  "advancements.sierras_flowers_advancement.descr": "Explore the fascinating wonders of flowers!",
   "advancements.skin_remedy.title": "Skin Remedy",
   "advancements.skin_remedy.descr": "As long as you take the thorns out of the Aloe Vera before using it!",
-  "advancements.sierras_flowers_advancement.title": "Sierra\u0027s Flowers",
   "advancements.you_cant_blow_it.title": "You Can Blow It!",
   "advancements.you_cant_blow_it.descr": "Obtain a Seeding Dandelion",
   "advancements.not_honey.title": "It\u0027s Not Honey",
-  "advancements.sierras_flowers_advancement.descr": "Explore the fascinating wonders of flowers!"
+  "advancements.not_honey.descr": "It\u0027s Not Honey"
 }
