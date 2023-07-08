@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Sierra's Flowers",
-  "description": "Simple Minecraft mod that brings new floral features to the overworld, as well as adding a new ore!",
+  "description": "Simple Minecraft mod that brings new floral features to the overworld!",
   "authors": [
     "Sierra"
   ],
