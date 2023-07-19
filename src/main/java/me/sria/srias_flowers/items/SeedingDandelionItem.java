@@ -4,11 +4,12 @@ import me.sria.srias_flowers.*;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.*;
 import net.minecraft.item.*;
+import net.minecraft.registry.*;
+import net.minecraft.registry.entry.*;
 import net.minecraft.server.world.*;
 import net.minecraft.sound.*;
 import net.minecraft.stat.*;
 import net.minecraft.util.*;
-import net.minecraft.util.registry.*;
 import net.minecraft.world.*;
 import net.minecraft.world.gen.feature.*;
 
@@ -25,8 +26,13 @@ public class SeedingDandelionItem extends BlockItem {
 		user.getItemCooldownManager().set(this, 20);
 		
 		if (world instanceof ServerWorld serverWorld) {
-			ConfiguredFeature configuredFeature = world.getRegistryManager().get(Registry.CONFIGURED_FEATURE_KEY).get(SriasFlowers.id("seeding_dandelion"));
-			configuredFeature.generate(serverWorld, serverWorld.getChunkManager().getChunkGenerator(),  world.random, user.getBlockPos().down());
+			RegistryEntry<ConfiguredFeature<?, ?>> registryEntry = world.getRegistryManager().get(RegistryKeys.CONFIGURED_FEATURE).getEntry(SriasConfiguredFeatures.SEEDING_DANDELION).orElse(null);
+			
+			if (registryEntry == null) {
+				return TypedActionResult.success(itemStack, world.isClient());
+			} else {
+				registryEntry.value().generate(serverWorld, serverWorld.getChunkManager().getChunkGenerator(),  world.random, user.getBlockPos().down());
+			}
 		}
 		
 		user.incrementStat(Stats.USED.getOrCreateStat(this));

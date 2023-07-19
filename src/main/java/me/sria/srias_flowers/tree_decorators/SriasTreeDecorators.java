@@ -1,6 +1,8 @@
 package me.sria.srias_flowers.tree_decorators;
 
-import me.sria.srias_flowers.mixin.*;
+import com.mojang.serialization.*;
+import me.sria.srias_flowers.*;
+import net.minecraft.registry.*;
 import net.minecraft.world.gen.treedecorator.*;
 
 public class SriasTreeDecorators {
@@ -8,7 +10,11 @@ public class SriasTreeDecorators {
 	static TreeDecoratorType<LeafCarpetTreeDecorator> LEAF_CARPET_DECORATOR;
 	
 	public static void register() {
-		LEAF_CARPET_DECORATOR = TreeDecoratorTypeMixin.invokeRegister("srias_leaf_carpet", LeafCarpetTreeDecorator.CODEC);
+		register("leaf_carpet", LeafCarpetTreeDecorator.CODEC);
+	}
+	
+	private static <P extends TreeDecorator> TreeDecoratorType<P> register(String id, Codec<P> codec) {
+		return Registry.register(Registries.TREE_DECORATOR_TYPE, SriasFlowers.id(id), new TreeDecoratorType(codec));
 	}
 	
 }

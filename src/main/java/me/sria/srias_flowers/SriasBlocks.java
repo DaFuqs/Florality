@@ -13,18 +13,10 @@ import net.minecraft.block.sapling.*;
 import net.minecraft.client.render.*;
 import net.minecraft.entity.effect.*;
 import net.minecraft.item.*;
+import net.minecraft.registry.*;
 import net.minecraft.sound.*;
-import net.minecraft.util.*;
-import net.minecraft.util.math.intprovider.*;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.util.registry.*;
 import net.minecraft.world.gen.feature.*;
-import net.minecraft.world.gen.feature.size.*;
-import net.minecraft.world.gen.foliage.*;
-import net.minecraft.world.gen.stateprovider.*;
-import net.minecraft.world.gen.treedecorator.*;
-import net.minecraft.world.gen.trunk.*;
-import org.jetbrains.annotations.*;
 
 import java.util.*;
 
@@ -41,30 +33,24 @@ public class SriasBlocks {
 		private final String name;
 		private final MapColor mapColor;
 		
-		private Block SAPLING;
-		private Block LEAVES;
-		private Block LEAF_CARPET;
+		public Block SAPLING;
+		public Block LEAVES;
+		public Block LEAF_CARPET;
 		
 		public WoodSet(String name, MapColor mapColor) {
 			this.name = name;
 			this.mapColor = mapColor;
 		}
 		
-		private static TreeFeatureConfig treeFeature(Block log, Block leaves, Block leafCarpet) {
-			TreeDecorator leafCarpetDecorator = new LeafCarpetTreeDecorator(BlockStateProvider.of(leafCarpet));
-			return new TreeFeatureConfig.Builder(BlockStateProvider.of(log), new LargeOakTrunkPlacer(3, 11, 0), BlockStateProvider.of(leaves), new LargeOakFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(4), 4), new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).decorators(List.of(leafCarpetDecorator)).ignoreVines().build();
-		}
-		
 		public void register() {
 			this.LEAVES = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
 			this.LEAF_CARPET = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
 			
-			RegistryEntry<? extends ConfiguredFeature<?, ?>> TREE_FEATURE_KEY = registerConfiguredFeature(name + "_tree", Feature.TREE, treeFeature(Blocks.OAK_LOG, LEAVES, LEAF_CARPET));
+			RegistryKey<ConfiguredFeature<?, ?>> featureKey = SriasConfiguredFeatures.of(name + "_tree");
 			SaplingGenerator SAPLING_GENERATOR = new SaplingGenerator() {
-				@Nullable
 				@Override
-				protected RegistryEntry<? extends ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-					return TREE_FEATURE_KEY;
+				protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
+					return featureKey;
 				}
 			};
 			
@@ -105,7 +91,7 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("sunrise_daisy", SUNRISE_DAISY);
 		registerBlockWithBlockItem("himalayan_poppy", HIMALAYAN_POPPY);
 		registerBlockWithBlockItem("blue_hydrangea", BLUE_HYDRANGEA);
-		registerBlockWithBlockItem("seeding_dandelion", SEEDING_DANDELION, new SeedingDandelionItem(SEEDING_DANDELION, new FabricItemSettings().group(SriasItemGroups.ITEM_GROUP)));
+		registerBlockWithBlockItem("seeding_dandelion", SEEDING_DANDELION, new SeedingDandelionItem(SEEDING_DANDELION, new FabricItemSettings()));
 		registerBlockWithBlockItem("fleabane", FLEABANE);
 		registerBlockWithBlockItem("dune_grass", DUNE_GRASS);
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
@@ -121,27 +107,19 @@ public class SriasBlocks {
 	}
 	
 	static Block registerBlockWithBlockItem(String name, Block block) {
-		Block b = Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
-		Registry.register(Registry.ITEM, SriasFlowers.id(name), new BlockItem(block, new FabricItemSettings().group(SriasItemGroups.ITEM_GROUP)));
+		Block b = Registry.register(Registries.BLOCK, SriasFlowers.id(name), block);
+		Registry.register(Registries.ITEM, SriasFlowers.id(name), new BlockItem(block, new FabricItemSettings()));
 		return b;
 	}
 	
 	static Block registerBlockWithBlockItem(String name, Block block, BlockItem blockItem) {
-		Block b = Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
-		Registry.register(Registry.ITEM, SriasFlowers.id(name), blockItem);
+		Block b = Registry.register(Registries.BLOCK, SriasFlowers.id(name), block);
+		Registry.register(Registries.ITEM, SriasFlowers.id(name), blockItem);
 		return b;
 	}
 	
-	public static <FC extends FeatureConfig, F extends Feature<FC>> RegistryEntry<ConfiguredFeature<FC, ?>> registerConfiguredFeature(String name, F feature, FC featureConfig) {
-		return registerConfiguredFeature(BuiltinRegistries.CONFIGURED_FEATURE, SriasFlowers.id(name), new ConfiguredFeature<>(feature, featureConfig));
-	}
-	
-	public static <V extends T, T> RegistryEntry<V> registerConfiguredFeature(Registry<T> registry, Identifier identifier, V value) {
-		return (RegistryEntry<V>) BuiltinRegistries.add(registry, identifier, value);
-	}
-	
 	static void registerBlock(String name, Block block) {
-		Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
+		Registry.register(Registries.BLOCK, SriasFlowers.id(name), block);
 	}
 	
 	@Environment(EnvType.CLIENT)

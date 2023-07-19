@@ -17,6 +17,7 @@ public class SriasFlowers implements ModInitializer {
 		SriasBlocks.register();
 		SriasItems.register();
 		SriasBlocks.registerFlammableBlocks();
-		SriasFeatures.addBiomeModifications();
+		SriasPlacedFeatures.addBiomeModifications();
+		SriasItemGroups.register();
 	}
 }
