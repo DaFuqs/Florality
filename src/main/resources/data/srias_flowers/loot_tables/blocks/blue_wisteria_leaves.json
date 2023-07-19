@@ -13,7 +13,7 @@
               "name": "srias_flowers:blue_wisteria_leaves",
               "conditions": [
                 {
-                  "condition": "minecraft:alternative",
+                  "condition": "minecraft:any_of",
                   "terms": [
                     {
                       "condition": "minecraft:match_tool",
