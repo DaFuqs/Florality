@@ -14,6 +14,7 @@ import net.minecraft.client.render.*;
 import net.minecraft.entity.effect.*;
 import net.minecraft.item.*;
 import net.minecraft.sound.*;
+import net.minecraft.util.*;
 import net.minecraft.util.math.intprovider.*;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.util.registry.*;
@@ -58,7 +59,7 @@ public class SriasBlocks {
 			this.LEAVES = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
 			this.LEAF_CARPET = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
 			
-			RegistryEntry<ConfiguredFeature<TreeFeatureConfig, ?>> TREE_FEATURE_KEY = ConfiguredFeatures.register(name + "_tree", Feature.TREE, treeFeature(Blocks.OAK_LOG, LEAVES, LEAF_CARPET));
+			RegistryEntry<? extends ConfiguredFeature<?, ?>> TREE_FEATURE_KEY = registerConfiguredFeature(name + "_tree", Feature.TREE, treeFeature(Blocks.OAK_LOG, LEAVES, LEAF_CARPET));
 			SaplingGenerator SAPLING_GENERATOR = new SaplingGenerator() {
 				@Nullable
 				@Override
@@ -129,6 +130,14 @@ public class SriasBlocks {
 		Block b = Registry.register(Registry.BLOCK, SriasFlowers.id(name), block);
 		Registry.register(Registry.ITEM, SriasFlowers.id(name), blockItem);
 		return b;
+	}
+	
+	public static <FC extends FeatureConfig, F extends Feature<FC>> RegistryEntry<ConfiguredFeature<FC, ?>> registerConfiguredFeature(String name, F feature, FC featureConfig) {
+		return registerConfiguredFeature(BuiltinRegistries.CONFIGURED_FEATURE, SriasFlowers.id(name), new ConfiguredFeature<>(feature, featureConfig));
+	}
+	
+	public static <V extends T, T> RegistryEntry<V> registerConfiguredFeature(Registry<T> registry, Identifier identifier, V value) {
+		return (RegistryEntry<V>) BuiltinRegistries.add(registry, identifier, value);
 	}
 	
 	static void registerBlock(String name, Block block) {
