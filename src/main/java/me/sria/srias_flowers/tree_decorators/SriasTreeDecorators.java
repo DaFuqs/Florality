@@ -8,9 +8,11 @@ import net.minecraft.world.gen.treedecorator.*;
 public class SriasTreeDecorators {
 	
 	static TreeDecoratorType<LeafCarpetTreeDecorator> LEAF_CARPET_DECORATOR;
+	static TreeDecoratorType<LeafCarpetTreeDecorator> HONEYSUCKLE_DECORATOR;
 	
 	public static void register() {
 		register("leaf_carpet", LeafCarpetTreeDecorator.CODEC);
+		register("honeysuckle", HoneysuckleTreeDecorator.CODEC);
 	}
 	
 	private static <P extends TreeDecorator> TreeDecoratorType<P> register(String id, Codec<P> codec) {

@@ -15,6 +15,7 @@ public class SriasItemGroups {
 		entries.add(SriasBlocks.FLEABANE);
 		entries.add(SriasBlocks.DUNE_GRASS);
 		entries.add(SriasBlocks.ALOE_VERA);
+		entries.add(SriasBlocks.HONEYSUCKLE);
 		entries.add(SriasBlocks.OBAMA_PLANT);
 		
 		for(SriasBlocks.WoodSet woodSet : SriasBlocks.WOOD_SETS) {

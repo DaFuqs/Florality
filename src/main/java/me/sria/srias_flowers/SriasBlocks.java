@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.item.v1.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.*;
 import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.*;
 import net.minecraft.block.sapling.*;
 import net.minecraft.client.render.*;
 import net.minecraft.entity.effect.*;
@@ -71,6 +72,7 @@ public class SriasBlocks {
 	public static final Block DUNE_GRASS = new DuneGrassBlock(FabricBlockSettings.copyOf(Blocks.GRASS));
 	public static final Block ALOE_VERA = new AloeVeraBlock(FLOWER_SETTINGS);
 	public static final Block OBAMA_PLANT = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
+	public static final HoneysuckleBlock HONEYSUCKLE = new HoneysuckleBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).replaceable().noCollision().strength(0.2F).sounds(BlockSoundGroup.GLOW_LICHEN).burnable().pistonBehavior(PistonBehavior.DESTROY));
 	
 	private static final AbstractBlock.Settings POTTED_PLANT_SETTINGS = FabricBlockSettings.copyOf(Blocks.POTTED_POPPY);
 	public static final Block POTTED_SUNRISE_DAISY = new FlowerPotBlock(SUNRISE_DAISY, POTTED_PLANT_SETTINGS);
@@ -96,6 +98,7 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("dune_grass", DUNE_GRASS);
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
 		registerBlockWithBlockItem("obama_plant", OBAMA_PLANT);
+		registerBlockWithBlockItem("honeysuckle", HONEYSUCKLE);
 		
 		registerBlock("potted_sunrise_daisy", POTTED_SUNRISE_DAISY);
 		registerBlock("potted_himalayan_poppy", POTTED_HIMALAYAN_POPPY);
@@ -131,7 +134,7 @@ public class SriasBlocks {
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
 				SUNRISE_DAISY, HIMALAYAN_POPPY,
 				BLUE_HYDRANGEA, SEEDING_DANDELION,
-				FLEABANE, DUNE_GRASS, ALOE_VERA,
+				FLEABANE, DUNE_GRASS, ALOE_VERA, HONEYSUCKLE,
 				
 				POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY,
 				POTTED_BLUE_HYDRANGEA, POTTED_SEEDING_DANDELION,

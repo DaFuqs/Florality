@@ -7,10 +7,12 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.*;
 import net.minecraft.world.gen.treedecorator.*;
+import org.jetbrains.annotations.*;
 
 import java.util.*;
 
 public class LeafCarpetTreeDecorator extends TreeDecorator {
+	
 	public static final Codec<LeafCarpetTreeDecorator> CODEC = BlockStateProvider.TYPE_CODEC.fieldOf("block_provider").xmap(LeafCarpetTreeDecorator::new, (decorator) -> decorator.provider).codec();
 	private final BlockStateProvider provider;
 	private final static int MAX_DEPTH = 10;
@@ -23,7 +25,7 @@ public class LeafCarpetTreeDecorator extends TreeDecorator {
 		return SriasTreeDecorators.LEAF_CARPET_DECORATOR;
 	}
 	
-	public void generate(TreeDecorator.Generator generator) {
+	public void generate(TreeDecorator.@NotNull Generator generator) {
 		Random random = generator.getRandom();
 		
 		List<BlockPos> leavesPositions = generator.getLeavesPositions();
