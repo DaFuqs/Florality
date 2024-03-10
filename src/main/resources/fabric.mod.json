@@ -26,7 +26,7 @@
     "sriasflowers.mixins.json"
   ],
   "depends": {
-    "minecraft": ">=1.20.1",
+    "minecraft": ">=1.20.4",
     "fabricloader": "*",
     "fabric": "*"
   }

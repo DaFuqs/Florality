@@ -10,14 +10,11 @@ import net.fabricmc.fabric.api.object.builder.v1.block.*;
 import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.*;
-import net.minecraft.block.sapling.*;
 import net.minecraft.client.render.*;
 import net.minecraft.entity.effect.*;
 import net.minecraft.item.*;
 import net.minecraft.registry.*;
 import net.minecraft.sound.*;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.world.gen.feature.*;
 
 import java.util.*;
 
@@ -47,15 +44,8 @@ public class SriasBlocks {
 			this.LEAVES = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
 			this.LEAF_CARPET = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
 			
-			RegistryKey<ConfiguredFeature<?, ?>> featureKey = SriasConfiguredFeatures.of(name + "_tree");
-			SaplingGenerator SAPLING_GENERATOR = new SaplingGenerator() {
-				@Override
-				protected RegistryKey<ConfiguredFeature<?, ?>> getTreeFeature(Random random, boolean bees) {
-					return featureKey;
-				}
-			};
-			
-			this.SAPLING = registerBlockWithBlockItem(name + "_sapling", new SaplingBlock(SAPLING_GENERATOR, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(mapColor)));
+			SaplingGenerator saplingGenerator = new SaplingGenerator("srias_" + name, Optional.empty(), Optional.of(RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, SriasFlowers.id(name + "_tree"))), Optional.empty());
+			this.SAPLING = registerBlockWithBlockItem(name + "_sapling", new SaplingBlock(saplingGenerator, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(mapColor)));
 		}
 		
 		public void registerClient() {
@@ -69,7 +59,7 @@ public class SriasBlocks {
 	public static final Block BLUE_HYDRANGEA = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
 	public static final Block SEEDING_DANDELION = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
 	public static final Block FLEABANE = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
-	public static final Block DUNE_GRASS = new DuneGrassBlock(FabricBlockSettings.copyOf(Blocks.GRASS));
+	public static final Block DUNE_GRASS = new DuneGrassBlock(FabricBlockSettings.copyOf(Blocks.SHORT_GRASS));
 	public static final Block ALOE_VERA = new AloeVeraBlock(FLOWER_SETTINGS);
 	public static final Block OBAMA_PLANT = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
 	public static final HoneysuckleBlock HONEYSUCKLE = new HoneysuckleBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).replaceable().noCollision().strength(0.2F).sounds(BlockSoundGroup.GLOW_LICHEN).burnable().pistonBehavior(PistonBehavior.DESTROY));

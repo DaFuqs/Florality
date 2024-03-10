@@ -1,5 +1,6 @@
 package me.sria.srias_flowers.blocks;
 
+import com.mojang.serialization.*;
 import me.sria.srias_flowers.*;
 import net.minecraft.block.*;
 import net.minecraft.fluid.*;
@@ -13,12 +14,19 @@ import net.minecraft.world.*;
 
 public class HoneysuckleBlock extends MultifaceGrowthBlock implements Fertilizable, Waterloggable {
 	
+	public static final MapCodec<HoneysuckleBlock> CODEC = createCodec(HoneysuckleBlock::new);
+	
 	private static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
 	private final LichenGrower grower = new LichenGrower(this);
 	
 	public HoneysuckleBlock(AbstractBlock.Settings settings) {
 		super(settings);
 		this.setDefaultState(this.getDefaultState().with(WATERLOGGED, false));
+	}
+	
+	@Override
+	protected MapCodec<? extends MultifaceGrowthBlock> getCodec() {
+		return CODEC;
 	}
 	
 	@Override
