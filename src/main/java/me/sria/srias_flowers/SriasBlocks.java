@@ -53,17 +53,19 @@ public class SriasBlocks {
 		}
 	}
 	
-	private static final AbstractBlock.Settings FLOWER_SETTINGS = FabricBlockSettings.copyOf(Blocks.POPPY);
-	public static final Block SUNRISE_DAISY = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
-	public static final Block HIMALAYAN_POPPY = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
-	public static final Block BLUE_HYDRANGEA = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
-	public static final Block SEEDING_DANDELION = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
-	public static final Block FLEABANE = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
+	public static final Block SUNRISE_DAISY = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block HIMALAYAN_POPPY = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block BLUE_HYDRANGEA = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block SEEDING_DANDELION = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block FLEABANE = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final Block DUNE_GRASS = new DuneGrassBlock(FabricBlockSettings.copyOf(Blocks.SHORT_GRASS));
-	public static final Block ALOE_VERA = new AloeVeraBlock(FLOWER_SETTINGS);
-	public static final Block OBAMA_PLANT = new FlowerBlock(StatusEffects.SPEED, 100, FLOWER_SETTINGS);
+	public static final Block ALOE_VERA = new AloeVeraBlock(FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block SCARLET_FLAX = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block OBAMA_PLANT = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block CHACONIA = new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));
+	public static final Block PERIWINKLE = new CarpetBlock(FabricBlockSettings.copyOf(Blocks.POPPY).offset(AbstractBlock.OffsetType.NONE));
 	public static final HoneysuckleBlock HONEYSUCKLE = new HoneysuckleBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).replaceable().noCollision().strength(0.2F).sounds(BlockSoundGroup.GLOW_LICHEN).burnable().pistonBehavior(PistonBehavior.DESTROY));
-	
+
 	private static final AbstractBlock.Settings POTTED_PLANT_SETTINGS = FabricBlockSettings.copyOf(Blocks.POTTED_POPPY);
 	public static final Block POTTED_SUNRISE_DAISY = new FlowerPotBlock(SUNRISE_DAISY, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_HIMALAYAN_POPPY = new FlowerPotBlock(HIMALAYAN_POPPY, POTTED_PLANT_SETTINGS);
@@ -71,6 +73,7 @@ public class SriasBlocks {
 	public static final Block POTTED_SEEDING_DANDELION = new FlowerPotBlock(SEEDING_DANDELION, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_FLEABANE = new FlowerPotBlock(FLEABANE, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_ALOE_VERA = new FlowerPotBlock(ALOE_VERA, POTTED_PLANT_SETTINGS);
+	public static final Block POTTED_SCARLET_FLAX = new FlowerPotBlock(SCARLET_FLAX, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_OBAMA_PLANT = new FlowerPotBlock(OBAMA_PLANT, POTTED_PLANT_SETTINGS);
 	
 	public static void register() {
@@ -87,8 +90,11 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("fleabane", FLEABANE);
 		registerBlockWithBlockItem("dune_grass", DUNE_GRASS);
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
+		registerBlockWithBlockItem("scarlet_flax", SCARLET_FLAX);
+		registerBlockWithBlockItem("chaconia", CHACONIA);
 		registerBlockWithBlockItem("obama_plant", OBAMA_PLANT);
 		registerBlockWithBlockItem("honeysuckle", HONEYSUCKLE);
+		registerBlockWithBlockItem("periwinkle", PERIWINKLE);
 		
 		registerBlock("potted_sunrise_daisy", POTTED_SUNRISE_DAISY);
 		registerBlock("potted_himalayan_poppy", POTTED_HIMALAYAN_POPPY);
@@ -96,6 +102,7 @@ public class SriasBlocks {
 		registerBlock("potted_seeding_dandelion", POTTED_SEEDING_DANDELION);
 		registerBlock("potted_fleabane", POTTED_FLEABANE);
 		registerBlock("potted_aloe_vera", POTTED_ALOE_VERA);
+		registerBlock("potted_scarlet_flax", POTTED_SCARLET_FLAX);
 		registerBlock("potted_obama_plant", POTTED_OBAMA_PLANT);
 	}
 	
@@ -125,10 +132,11 @@ public class SriasBlocks {
 				SUNRISE_DAISY, HIMALAYAN_POPPY,
 				BLUE_HYDRANGEA, SEEDING_DANDELION,
 				FLEABANE, DUNE_GRASS, ALOE_VERA, HONEYSUCKLE,
+				SCARLET_FLAX, CHACONIA, PERIWINKLE,
 				
 				POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY,
 				POTTED_BLUE_HYDRANGEA, POTTED_SEEDING_DANDELION,
-				POTTED_FLEABANE, POTTED_ALOE_VERA
+				POTTED_FLEABANE, POTTED_ALOE_VERA, POTTED_SCARLET_FLAX
 		);
 	}
 	
@@ -141,6 +149,9 @@ public class SriasBlocks {
 		FlammableBlockRegistry.getDefaultInstance().add(DUNE_GRASS, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(ALOE_VERA, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(OBAMA_PLANT, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(SCARLET_FLAX, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(CHACONIA, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(PERIWINKLE, 60, 100);
 	}
 	
 	
