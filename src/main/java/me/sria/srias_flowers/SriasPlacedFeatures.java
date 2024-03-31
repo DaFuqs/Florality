@@ -28,11 +28,14 @@ public class SriasPlacedFeatures {
 	public static RegistryKey<PlacedFeature> BLUE_WISTERIA_TREES = of("blue_wisteria_trees");
 	public static RegistryKey<PlacedFeature> PURPLE_WISTERIA_TREES = of("purple_wisteria_trees");
 	
+	public static RegistryKey<PlacedFeature> PINK_TULIP = of("pink_tulip");
+	
 	public static RegistryKey<PlacedFeature> of(String id) {
 		return RegistryKey.of(RegistryKeys.PLACED_FEATURE, SriasFlowers.id(id));
 	}
 	
 	static void addBiomeModifications() {
+		// Sierras
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_HILL), GenerationStep.Feature.VEGETAL_DECORATION, HIMALAYAN_POPPY);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SEEDING_DANDELION);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
@@ -51,6 +54,12 @@ public class SriasPlacedFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SUNRISE_DAISY);
+		
+		// More vanilla flowers
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_TULIP);
+		
+		// Vanilla
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, TreePlacedFeatures.CHERRY_BEES_005);
 	}
 	
 }
