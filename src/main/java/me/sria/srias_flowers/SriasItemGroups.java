@@ -17,11 +17,13 @@ public class SriasItemGroups {
 		entries.add(SriasBlocks.ALOE_VERA);
 		entries.add(SriasBlocks.HONEYSUCKLE);
 		entries.add(SriasBlocks.PERIWINKLE);
+		entries.add(SriasBlocks.PURPLE_PERIWINKLE);
+		entries.add(SriasBlocks.WHITE_PERIWINKLE);
 		entries.add(SriasBlocks.CHACONIA);
 		entries.add(SriasBlocks.SCARLET_FLAX);
 		entries.add(SriasBlocks.OBAMA_PLANT);
 		
-		for(SriasBlocks.WoodSet woodSet : SriasBlocks.WOOD_SETS) {
+		for (SriasBlocks.WoodSet woodSet : SriasBlocks.WOOD_SETS) {
 			entries.add(woodSet.SAPLING);
 			entries.add(woodSet.LEAVES);
 			entries.add(woodSet.LEAF_CARPET);
