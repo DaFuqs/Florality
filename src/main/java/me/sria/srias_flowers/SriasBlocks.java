@@ -64,8 +64,8 @@ public class SriasBlocks {
 	public static final Block OBAMA_PLANT = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final Block CHACONIA = new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));
 	public static final Block PERIWINKLE = new PeriwinkleBlock(FabricBlockSettings.copyOf(Blocks.POPPY).offset(AbstractBlock.OffsetType.NONE));
-	public static final Block WHITE_PERIWINKLE = new PeriwinkleBlock(FabricBlockSettings.copyOf(Blocks.POPPY).offset(AbstractBlock.OffsetType.NONE));
-	public static final Block PURPLE_PERIWINKLE = new PeriwinkleBlock(FabricBlockSettings.copyOf(Blocks.POPPY).offset(AbstractBlock.OffsetType.NONE));
+	public static final Block WHITE_PERIWINKLE = new PeriwinkleBlock(FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block PURPLE_PERIWINKLE = new PeriwinkleBlock(FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final HoneysuckleBlock HONEYSUCKLE = new HoneysuckleBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).replaceable().noCollision().strength(0.2F).sounds(BlockSoundGroup.GLOW_LICHEN).burnable().pistonBehavior(PistonBehavior.DESTROY));
 	
 	private static final AbstractBlock.Settings POTTED_PLANT_SETTINGS = FabricBlockSettings.copyOf(Blocks.POTTED_POPPY);
