@@ -136,7 +136,7 @@ public class SriasBlocks {
 				SUNRISE_DAISY, HIMALAYAN_POPPY,
 				BLUE_HYDRANGEA, SEEDING_DANDELION,
 				FLEABANE, DUNE_GRASS, ALOE_VERA, HONEYSUCKLE,
-				SCARLET_FLAX, CHACONIA, PERIWINKLE,
+				SCARLET_FLAX, CHACONIA, PERIWINKLE, PURPLE_PERIWINKLE, WHITE_PERIWINKLE,
 				
 				POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY,
 				POTTED_BLUE_HYDRANGEA, POTTED_SEEDING_DANDELION,
@@ -156,6 +156,8 @@ public class SriasBlocks {
 		FlammableBlockRegistry.getDefaultInstance().add(SCARLET_FLAX, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(CHACONIA, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(PERIWINKLE, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(WHITE_PERIWINKLE, 60, 100);
+		FlammableBlockRegistry.getDefaultInstance().add(PURPLE_PERIWINKLE, 60, 100);
 	}
 	
 	
