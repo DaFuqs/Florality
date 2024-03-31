@@ -30,6 +30,8 @@ public class SriasPlacedFeatures {
 	
 	public static RegistryKey<PlacedFeature> PINK_TULIP = of("pink_tulip");
 	
+	public static RegistryKey<PlacedFeature> CHERRY_TREE = of("cherry_tree");
+	
 	public static RegistryKey<PlacedFeature> of(String id) {
 		return RegistryKey.of(RegistryKeys.PLACED_FEATURE, SriasFlowers.id(id));
 	}
@@ -59,7 +61,7 @@ public class SriasPlacedFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_TULIP);
 		
 		// Vanilla
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, TreePlacedFeatures.CHERRY_BEES_005);
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, CHERRY_TREE);
 	}
 	
 }
