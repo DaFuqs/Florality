@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "srias_flowers:block/orange_zinnia_bottom"
+    },
+    "half=upper": {
+      "model": "srias_flowers:block/orange_zinnia_top"
+    }
+  }
+}

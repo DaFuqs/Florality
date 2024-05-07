@@ -67,6 +67,13 @@ public class SriasBlocks {
 	public static final Block WHITE_PERIWINKLE = new PeriwinkleBlock(FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final Block PURPLE_PERIWINKLE = new PeriwinkleBlock(FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final HoneysuckleBlock HONEYSUCKLE = new HoneysuckleBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).replaceable().noCollision().strength(0.2F).sounds(BlockSoundGroup.GLOW_LICHEN).burnable().pistonBehavior(PistonBehavior.DESTROY));
+	public static final Block FELICIA_DAISY = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block FLAME_ORCHID = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block GERBERA_DAISY = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block ORANGE_ZINNIA = new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));
+	public static final Block PINK_ALLIUM = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block PINK_ORCHID = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
+	public static final Block PINK_ZINNIA = new TallFlowerBlock(FabricBlockSettings.copyOf(Blocks.ROSE_BUSH));
 	
 	private static final AbstractBlock.Settings POTTED_PLANT_SETTINGS = FabricBlockSettings.copyOf(Blocks.POTTED_POPPY);
 	public static final Block POTTED_SUNRISE_DAISY = new FlowerPotBlock(SUNRISE_DAISY, POTTED_PLANT_SETTINGS);
@@ -77,6 +84,11 @@ public class SriasBlocks {
 	public static final Block POTTED_ALOE_VERA = new FlowerPotBlock(ALOE_VERA, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_SCARLET_FLAX = new FlowerPotBlock(SCARLET_FLAX, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_OBAMA_PLANT = new FlowerPotBlock(OBAMA_PLANT, POTTED_PLANT_SETTINGS);
+	public static final Block POTTED_FELICIA_DAISY = new FlowerPotBlock(FELICIA_DAISY, POTTED_PLANT_SETTINGS);
+	public static final Block POTTED_FLAME_ORCHID = new FlowerPotBlock(FLAME_ORCHID, POTTED_PLANT_SETTINGS);
+	public static final Block POTTED_GERBERA_DAISY = new FlowerPotBlock(GERBERA_DAISY, POTTED_PLANT_SETTINGS);
+	public static final Block POTTED_PINK_ALLIUM = new FlowerPotBlock(PINK_ALLIUM, POTTED_PLANT_SETTINGS);
+	public static final Block POTTED_PINK_ORCHID = new FlowerPotBlock(PINK_ORCHID, POTTED_PLANT_SETTINGS);
 	
 	public static void register() {
 		SriasTreeDecorators.register();
@@ -100,6 +112,14 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("white_periwinkle", WHITE_PERIWINKLE);
 		registerBlockWithBlockItem("purple_periwinkle", PURPLE_PERIWINKLE);
 		
+		registerBlockWithBlockItem("felicia_daisy", FELICIA_DAISY);
+		registerBlockWithBlockItem("flame_orchid", FLAME_ORCHID);
+		registerBlockWithBlockItem("gerbera_daisy", GERBERA_DAISY);
+		registerBlockWithBlockItem("orange_zinnia", ORANGE_ZINNIA);
+		registerBlockWithBlockItem("pink_allium", PINK_ALLIUM);
+		registerBlockWithBlockItem("pink_orchid", PINK_ORCHID);
+		registerBlockWithBlockItem("pink_zinnia", PINK_ZINNIA);
+		
 		registerBlock("potted_sunrise_daisy", POTTED_SUNRISE_DAISY);
 		registerBlock("potted_himalayan_poppy", POTTED_HIMALAYAN_POPPY);
 		registerBlock("potted_blue_hydrangea", POTTED_BLUE_HYDRANGEA);
@@ -108,6 +128,12 @@ public class SriasBlocks {
 		registerBlock("potted_aloe_vera", POTTED_ALOE_VERA);
 		registerBlock("potted_scarlet_flax", POTTED_SCARLET_FLAX);
 		registerBlock("potted_obama_plant", POTTED_OBAMA_PLANT);
+		
+		registerBlockWithBlockItem("potted_felicia_daisy", POTTED_FELICIA_DAISY);
+		registerBlockWithBlockItem("potted_flame_orchid", POTTED_FLAME_ORCHID);
+		registerBlockWithBlockItem("potted_gerbera_daisy", POTTED_GERBERA_DAISY);
+		registerBlockWithBlockItem("potted_pink_allium", POTTED_PINK_ALLIUM);
+		registerBlockWithBlockItem("potted_pink_orchid", POTTED_PINK_ORCHID);
 	}
 	
 	static Block registerBlockWithBlockItem(String name, Block block) {
@@ -137,10 +163,12 @@ public class SriasBlocks {
 				BLUE_HYDRANGEA, SEEDING_DANDELION,
 				FLEABANE, DUNE_GRASS, ALOE_VERA, HONEYSUCKLE,
 				SCARLET_FLAX, CHACONIA, PERIWINKLE, PURPLE_PERIWINKLE, WHITE_PERIWINKLE,
+				FELICIA_DAISY, FLAME_ORCHID, GERBERA_DAISY, ORANGE_ZINNIA, PINK_ALLIUM, PINK_ORCHID, PINK_ZINNIA,
 				
 				POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY,
 				POTTED_BLUE_HYDRANGEA, POTTED_SEEDING_DANDELION,
-				POTTED_FLEABANE, POTTED_ALOE_VERA, POTTED_SCARLET_FLAX
+				POTTED_FLEABANE, POTTED_ALOE_VERA, POTTED_SCARLET_FLAX,
+				POTTED_FELICIA_DAISY, POTTED_FLAME_ORCHID, POTTED_GERBERA_DAISY, POTTED_PINK_ALLIUM, POTTED_PINK_ORCHID
 		);
 	}
 	

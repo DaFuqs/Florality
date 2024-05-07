@@ -23,6 +23,14 @@ public class SriasItemGroups {
 		entries.add(SriasBlocks.SCARLET_FLAX);
 		entries.add(SriasBlocks.OBAMA_PLANT);
 		
+		entries.add(SriasBlocks.FELICIA_DAISY);
+		entries.add(SriasBlocks.FLAME_ORCHID);
+		entries.add(SriasBlocks.GERBERA_DAISY);
+		entries.add(SriasBlocks.ORANGE_ZINNIA);
+		entries.add(SriasBlocks.PINK_ALLIUM);
+		entries.add(SriasBlocks.PINK_ORCHID);
+		entries.add(SriasBlocks.PINK_ZINNIA);
+		
 		for (SriasBlocks.WoodSet woodSet : SriasBlocks.WOOD_SETS) {
 			entries.add(woodSet.SAPLING);
 			entries.add(woodSet.LEAVES);
