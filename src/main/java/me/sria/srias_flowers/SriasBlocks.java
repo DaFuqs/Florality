@@ -97,29 +97,34 @@ public class SriasBlocks {
 			woodSet.register();
 		}
 		
+		// Non-flowers
+		registerBlockWithBlockItem("dune_grass", DUNE_GRASS);
+		registerBlockWithBlockItem("honeysuckle", HONEYSUCKLE);
+		
+		// Small flowers
 		registerBlockWithBlockItem("sunrise_daisy", SUNRISE_DAISY);
 		registerBlockWithBlockItem("himalayan_poppy", HIMALAYAN_POPPY);
 		registerBlockWithBlockItem("blue_hydrangea", BLUE_HYDRANGEA);
 		registerBlockWithBlockItem("seeding_dandelion", SEEDING_DANDELION, new SeedingDandelionItem(SEEDING_DANDELION, new FabricItemSettings()));
 		registerBlockWithBlockItem("fleabane", FLEABANE);
-		registerBlockWithBlockItem("dune_grass", DUNE_GRASS);
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
 		registerBlockWithBlockItem("scarlet_flax", SCARLET_FLAX);
-		registerBlockWithBlockItem("chaconia", CHACONIA);
 		registerBlockWithBlockItem("obama_plant", OBAMA_PLANT);
-		registerBlockWithBlockItem("honeysuckle", HONEYSUCKLE);
 		registerBlockWithBlockItem("periwinkle", PERIWINKLE);
 		registerBlockWithBlockItem("white_periwinkle", WHITE_PERIWINKLE);
 		registerBlockWithBlockItem("purple_periwinkle", PURPLE_PERIWINKLE);
-		
 		registerBlockWithBlockItem("felicia_daisy", FELICIA_DAISY);
 		registerBlockWithBlockItem("flame_orchid", FLAME_ORCHID);
 		registerBlockWithBlockItem("gerbera_daisy", GERBERA_DAISY);
-		registerBlockWithBlockItem("orange_zinnia", ORANGE_ZINNIA);
 		registerBlockWithBlockItem("pink_allium", PINK_ALLIUM);
 		registerBlockWithBlockItem("pink_orchid", PINK_ORCHID);
+		
+		// Tall flowers
+		registerBlockWithBlockItem("chaconia", CHACONIA);
+		registerBlockWithBlockItem("orange_zinnia", ORANGE_ZINNIA);
 		registerBlockWithBlockItem("pink_zinnia", PINK_ZINNIA);
 		
+		// Potted flowers
 		registerBlock("potted_sunrise_daisy", POTTED_SUNRISE_DAISY);
 		registerBlock("potted_himalayan_poppy", POTTED_HIMALAYAN_POPPY);
 		registerBlock("potted_blue_hydrangea", POTTED_BLUE_HYDRANGEA);
@@ -128,12 +133,11 @@ public class SriasBlocks {
 		registerBlock("potted_aloe_vera", POTTED_ALOE_VERA);
 		registerBlock("potted_scarlet_flax", POTTED_SCARLET_FLAX);
 		registerBlock("potted_obama_plant", POTTED_OBAMA_PLANT);
-		
-		registerBlockWithBlockItem("potted_felicia_daisy", POTTED_FELICIA_DAISY);
-		registerBlockWithBlockItem("potted_flame_orchid", POTTED_FLAME_ORCHID);
-		registerBlockWithBlockItem("potted_gerbera_daisy", POTTED_GERBERA_DAISY);
-		registerBlockWithBlockItem("potted_pink_allium", POTTED_PINK_ALLIUM);
-		registerBlockWithBlockItem("potted_pink_orchid", POTTED_PINK_ORCHID);
+		registerBlock("potted_felicia_daisy", POTTED_FELICIA_DAISY);
+		registerBlock("potted_flame_orchid", POTTED_FLAME_ORCHID);
+		registerBlock("potted_gerbera_daisy", POTTED_GERBERA_DAISY);
+		registerBlock("potted_pink_allium", POTTED_PINK_ALLIUM);
+		registerBlock("potted_pink_orchid", POTTED_PINK_ORCHID);
 	}
 	
 	static Block registerBlockWithBlockItem(String name, Block block) {
