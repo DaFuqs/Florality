@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "srias_flowers:fleabane"
+      "item": "srias_flowers:blue_hydrangea"
     }
   ],
   "result": {
-    "item": "minecraft:light_gray_dye",
+    "item": "minecraft:light_blue_dye",
     "count": 1
   }
 }

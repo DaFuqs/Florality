@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "srias_flowers:fleabane"
+      "item": "srias_flowers:felicia_daisy"
     }
   ],
   "result": {
-    "item": "minecraft:light_gray_dye",
+    "item": "minecraft:cyan_dye",
     "count": 1
   }
 }
