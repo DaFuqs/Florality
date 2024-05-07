@@ -23,12 +23,19 @@ public class SriasPlacedFeatures {
 	public static RegistryKey<PlacedFeature> PURPLE_PERIWINKLE = of("purple_periwinkle");
 	public static RegistryKey<PlacedFeature> SCARLET_FLAX_COMMON = of("scarlet_flax_common");
 	public static RegistryKey<PlacedFeature> SCARLET_FLAX_RARE = of("scarlet_flax_rare");
+	public static RegistryKey<PlacedFeature> PINK_TULIP = of("pink_tulip");
+	public static RegistryKey<PlacedFeature> FELICIA_DAISY = of("felicia_daisy");
+	public static RegistryKey<PlacedFeature> FLAME_ORCHID = of("flame_orchid");
+	public static RegistryKey<PlacedFeature> GERBERA_DAISY = of("gerbera_daisy");
+	public static RegistryKey<PlacedFeature> ORANGE_ZINNIA = of("orange_zinnia");
+	public static RegistryKey<PlacedFeature> PINK_ALLIUM = of("pink_allium");
+	public static RegistryKey<PlacedFeature> PINK_ALLIUM_RARE = of("pink_allium_rare");
+	public static RegistryKey<PlacedFeature> PINK_ORCHID = of("pink_orchid");
+	public static RegistryKey<PlacedFeature> PINK_ZINNIA = of("pink_zinnia");
 	
 	public static RegistryKey<PlacedFeature> DOGWOOD_TREES = of("dogwood_trees");
 	public static RegistryKey<PlacedFeature> BLUE_WISTERIA_TREES = of("blue_wisteria_trees");
 	public static RegistryKey<PlacedFeature> PURPLE_WISTERIA_TREES = of("purple_wisteria_trees");
-	
-	public static RegistryKey<PlacedFeature> PINK_TULIP = of("pink_tulip");
 	
 	public static RegistryKey<PlacedFeature> CHERRY_TREE = of("cherry_tree");
 	
@@ -43,25 +50,42 @@ public class SriasPlacedFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT), GenerationStep.Feature.VEGETAL_DECORATION, DUNE_GRASS);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT), GenerationStep.Feature.VEGETAL_DECORATION, ALOE_VERA);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, CHACONIA);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, CHACONIA);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, SCARLET_FLAX_RARE);
-		
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_HYDRANGEA);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, DOGWOOD_TREES);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_WISTERIA_TREES);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_WISTERIA_TREES);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SCARLET_FLAX_COMMON);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PERIWINKLE);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_PERIWINKLE);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_PERIWINKLE);
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SUNRISE_DAISY);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ALLIUM_RARE);
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ALLIUM);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, FLAME_ORCHID);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ORCHID);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ORCHID);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, FELICIA_DAISY);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, FELICIA_DAISY);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, FELICIA_DAISY);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, GERBERA_DAISY);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, GERBERA_DAISY);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, GERBERA_DAISY);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ZINNIA);
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, ORANGE_ZINNIA);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ZINNIA);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, ORANGE_ZINNIA);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_HYDRANGEA);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, DOGWOOD_TREES);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_WISTERIA_TREES);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_WISTERIA_TREES);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, SCARLET_FLAX_COMMON);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, PERIWINKLE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_PERIWINKLE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_PERIWINKLE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PERIWINKLE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_PERIWINKLE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_PERIWINKLE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SUNRISE_DAISY);
 		
 		// More vanilla flowers
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_TULIP);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_TULIP);
 		
 		// Vanilla
-		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, CHERRY_TREE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, CHERRY_TREE);
 	}
 	
 }
