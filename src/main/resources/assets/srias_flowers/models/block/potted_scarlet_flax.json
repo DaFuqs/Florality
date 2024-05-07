@@ -1,6 +1,7 @@
 {
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
-    "plant": "srias_flowers:block/pink_orchid"
+    "plant": "srias_flowers:block/scarlet_flax"
   }
 }
+ 

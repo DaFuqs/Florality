@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/flower_pot_plant",
+  "parent": "minecraft:block/flower_pot_cross",
   "textures": {
     "plant": "srias_flowers:block/flame_orchid"
   }
