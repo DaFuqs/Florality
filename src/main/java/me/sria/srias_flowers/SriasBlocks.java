@@ -24,7 +24,7 @@ public class SriasBlocks {
 
 	public static List<SaplingSet> SAPLING_SETS = new ArrayList<>() {{
 		add(new SaplingSet("dogwood", MapColor.WHITE_GRAY));
-		add(new SaplingSet("pink_dogwood", MapColor.DULL_PINK));
+		add(new SaplingSet("red_dogwood", MapColor.DULL_PINK));
 		add(new SaplingSet("blue_wisteria", MapColor.WATER_BLUE));
 		add(new SaplingSet("purple_wisteria", MapColor.TERRACOTTA_PURPLE));
 	}};
@@ -81,6 +81,7 @@ public class SriasBlocks {
 		public Block log;
 		public Block strippedLog;
 		public Block wood;
+		public Block strippedWood;
 		public Block stairs;
 		public Block sign;
 		public Block door;
@@ -107,6 +108,7 @@ public class SriasBlocks {
 			log = registerBlockWithBlockItem(name + "_log", Blocks.createLogBlock(mapColor, topLogMapColor));
 			strippedLog = registerBlockWithBlockItem("stripped_" + name + "_log", Blocks.createLogBlock(mapColor, mapColor));
 			wood = registerBlockWithBlockItem(name + "_wood", new PillarBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+			strippedWood = registerBlockWithBlockItem("stripped_" + name + "_wood", new PillarBlock(AbstractBlock.Settings.create().mapColor(topLogMapColor).instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 			stairs = registerBlockWithBlockItem(name + "_stairs", createStairsBlock(planks));
 			sign = registerBlockWithBlockItem(name + "_sign", new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable()));
 			door = registerBlockWithBlockItem(name + "_door", new DoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).instrument(Instrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
@@ -119,6 +121,9 @@ public class SriasBlocks {
 			fenceGate = registerBlockWithBlockItem(name + "_fence_gate", new FenceGateBlock(woodType, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).burnable()));
 			button = registerBlockWithBlockItem(name + "_button", Blocks.createWoodenButtonBlock(BLOCK_SET_TYPE));
 			slab = registerBlockWithBlockItem(name + "_slab", new SlabBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+
+			StrippableBlockRegistry.register(log, strippedLog);
+			StrippableBlockRegistry.register(wood, strippedWood);
 		}
 
 		private static Block createStairsBlock(Block base) {

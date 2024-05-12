@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/leaves",
   "textures": {
-    "all": "srias_flowers:block/pink_dogwood_leaves"
+    "all": "srias_flowers:block/red_dogwood_leaves"
   }
 }

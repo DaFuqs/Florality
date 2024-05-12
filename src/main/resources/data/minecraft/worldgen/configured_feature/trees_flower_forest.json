@@ -5,18 +5,8 @@
       {
         "chance": 0.2,
         "feature": "minecraft:birch_bees_002"
-      },
-      {
-        "chance": 0.3,
-        "feature": "minecraft:fancy_oak_bees_002"
       }
     ],
-    "default": {
-      "feature": {
-        "type": "minecraft:no_op",
-        "config": {}
-      },
-      "placement": []
-    }
+    "default": "minecraft:fancy_oak_bees_002"
   }
 }

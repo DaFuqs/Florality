@@ -1,18 +1,18 @@
 {
-  "type": "srias_flowers:block",
+  "type": "minecraft:block",
   "pools": [
     {
       "bonus_rolls": 0.0,
       "entries": [
         {
-          "type": "srias_flowers:item",
+          "type": "minecraft:item",
           "functions": [
             {
               "add": false,
               "conditions": [
                 {
-                  "block": "minecraft:dogwood_slab",
-                  "condition": "srias_flowers:block_state_property",
+                  "block": "srias_flowers:dogwood_slab",
+                  "condition": "minecraft:block_state_property",
                   "properties": {
                     "type": "double"
                   }
@@ -25,7 +25,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "minecraft:dogwood_slab"
+          "name": "srias_flowers:dogwood_slab"
         }
       ],
       "rolls": 1.0

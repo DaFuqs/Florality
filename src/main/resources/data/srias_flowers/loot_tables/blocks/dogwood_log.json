@@ -1,5 +1,5 @@
 {
-  "type": "srias_flowers:block",
+  "type": "minecraft:block",
   "pools": [
     {
       "bonus_rolls": 0.0,
@@ -10,8 +10,8 @@
       ],
       "entries": [
         {
-          "type": "srias_flowers:item",
-          "name": "minecraft:dogwood_log"
+          "type": "minecraft:item",
+          "name": "srias_flowers:dogwood_log"
         }
       ],
       "rolls": 1.0
