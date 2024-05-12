@@ -30,11 +30,12 @@ public class SriasItemGroups {
 		entries.add(SriasBlocks.PINK_ALLIUM);
 		entries.add(SriasBlocks.PINK_ORCHID);
 		entries.add(SriasBlocks.PINK_ZINNIA);
-		
-		for (SriasBlocks.WoodSet woodSet : SriasBlocks.WOOD_SETS) {
-			entries.add(woodSet.SAPLING);
-			entries.add(woodSet.LEAVES);
-			entries.add(woodSet.LEAF_CARPET);
+
+		for (SriasBlocks.WoodSet set : SriasBlocks.WOOD_SETS) {
+			set.addEntries(entries);
+		}
+		for (SriasBlocks.SaplingSet set : SriasBlocks.SAPLING_SETS) {
+			set.addEntries(entries);
 		}
 	}).displayName(Text.translatable("itemGroup.srias_flowers.srias_flowers")).icon(() -> new ItemStack(SriasBlocks.BLUE_HYDRANGEA)).build();
 	

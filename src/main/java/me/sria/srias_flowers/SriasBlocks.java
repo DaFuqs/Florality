@@ -7,8 +7,10 @@ import net.fabricmc.api.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
 import net.fabricmc.fabric.api.item.v1.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.*;
+import net.fabricmc.fabric.api.object.builder.v1.block.type.*;
 import net.fabricmc.fabric.api.registry.*;
 import net.minecraft.block.*;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.*;
 import net.minecraft.client.render.*;
 import net.minecraft.entity.effect.*;
@@ -19,37 +21,131 @@ import net.minecraft.sound.*;
 import java.util.*;
 
 public class SriasBlocks {
+
+	public static List<SaplingSet> SAPLING_SETS = new ArrayList<>() {{
+		add(new SaplingSet("dogwood", MapColor.WHITE_GRAY));
+		add(new SaplingSet("pink_dogwood", MapColor.DULL_PINK));
+		add(new SaplingSet("blue_wisteria", MapColor.WATER_BLUE));
+		add(new SaplingSet("purple_wisteria", MapColor.TERRACOTTA_PURPLE));
+	}};
+
 	
 	public static List<WoodSet> WOOD_SETS = new ArrayList<>() {{
-		add(new WoodSet("dogwood", MapColor.WHITE_GRAY));
-		add(new WoodSet("blue_wisteria", MapColor.WATER_BLUE));
-		add(new WoodSet("purple_wisteria", MapColor.TERRACOTTA_PURPLE));
+		add(new WoodSet("dogwood", MapColor.OAK_TAN, MapColor.GRAY));
 	}};
-	
-	public static class WoodSet {
+
+	public static class SaplingSet {
 		
 		private final String name;
 		private final MapColor mapColor;
-		
-		public Block SAPLING;
-		public Block LEAVES;
-		public Block LEAF_CARPET;
-		
-		public WoodSet(String name, MapColor mapColor) {
+
+		public Block sapling;
+		public Block leaves;
+		public Block leafCarpet;
+
+		public SaplingSet(String name, MapColor mapColor) {
 			this.name = name;
 			this.mapColor = mapColor;
 		}
 		
 		public void register() {
-			this.LEAVES = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
-			this.LEAF_CARPET = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
+			this.leaves = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
+			this.leafCarpet = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
 			
 			SaplingGenerator saplingGenerator = new SaplingGenerator("srias_" + name, Optional.empty(), Optional.of(RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, SriasFlowers.id(name + "_tree"))), Optional.empty());
-			this.SAPLING = registerBlockWithBlockItem(name + "_sapling", new SaplingBlock(saplingGenerator, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(mapColor)));
+			this.sapling = registerBlockWithBlockItem(name + "_sapling", new SaplingBlock(saplingGenerator, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(mapColor)));
 		}
 		
 		public void registerClient() {
-			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), LEAF_CARPET, SAPLING);
+			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), leafCarpet, sapling);
+		}
+
+		public void addEntries(ItemGroup.Entries entries) {
+			entries.add(sapling);
+			entries.add(leaves);
+			entries.add(leafCarpet);
+		}
+	}
+
+	public static class WoodSet {
+
+		public static final BlockSetType BLOCK_SET_TYPE = BlockSetTypeBuilder.copyOf(BlockSetType.OAK).register(SriasFlowers.id("wood"));
+
+		private final String name;
+		private final MapColor mapColor;
+		private final MapColor topLogMapColor;
+
+		public final WoodType woodType;
+
+		public Block planks;
+		public Block log;
+		public Block strippedLog;
+		public Block wood;
+		public Block stairs;
+		public Block sign;
+		public Block door;
+		public Block wallSign;
+		public Block hangingSign;
+		public Block wallHangingSign;
+		public Block pressurePlate;
+		public Block fence;
+		public Block trapdoor;
+		public Block fenceGate;
+		public Block button;
+		public Block slab;
+
+		public WoodSet(String name, MapColor mapColor, MapColor topLogMapColor) {
+			this.name = name;
+			this.mapColor = mapColor;
+			this.topLogMapColor = topLogMapColor;
+
+			this.woodType = new WoodTypeBuilder().register(SriasFlowers.id(name), BLOCK_SET_TYPE);
+		}
+
+		public void register() {
+			planks = registerBlockWithBlockItem(name + "_planks", new Block(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+			log = registerBlockWithBlockItem(name + "_log", Blocks.createLogBlock(mapColor, topLogMapColor));
+			strippedLog = registerBlockWithBlockItem("stripped_" + name + "_log", Blocks.createLogBlock(mapColor, mapColor));
+			wood = registerBlockWithBlockItem(name + "_wood", new PillarBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+			stairs = registerBlockWithBlockItem(name + "_stairs", createStairsBlock(planks));
+			sign = registerBlockWithBlockItem(name + "_sign", new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable()));
+			door = registerBlockWithBlockItem(name + "_door", new DoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).instrument(Instrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
+			wallSign = registerBlockWithBlockItem(name + "_wall_sign", new WallSignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).dropsLike(sign).burnable()));
+			hangingSign = registerBlockWithBlockItem(name + "_hanging_sign", new HangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable()));
+			wallHangingSign = registerBlockWithBlockItem(name + "_wall_hanging_sign", new WallHangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable().dropsLike(hangingSign)));
+			pressurePlate = registerBlockWithBlockItem(name + "_pressure_plate", new PressurePlateBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(0.5F).burnable().pistonBehavior(PistonBehavior.DESTROY)));
+			fence = registerBlockWithBlockItem(name + "_fence", new FenceBlock(AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+			trapdoor = registerBlockWithBlockItem(name + "_trapdoor", new TrapdoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
+			fenceGate = registerBlockWithBlockItem(name + "_fence_gate", new FenceGateBlock(woodType, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).burnable()));
+			button = registerBlockWithBlockItem(name + "_button", Blocks.createWoodenButtonBlock(BLOCK_SET_TYPE));
+			slab = registerBlockWithBlockItem(name + "_slab", new SlabBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+		}
+
+		private static Block createStairsBlock(Block base) {
+			return new StairsBlock(base.getDefaultState(), AbstractBlock.Settings.copy(base));
+		}
+
+		public void registerClient() {
+			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), door, trapdoor);
+		}
+
+		public void addEntries(ItemGroup.Entries entries) {
+			entries.add(planks);
+			entries.add(log);
+			entries.add(strippedLog);
+			entries.add(wood);
+			entries.add(stairs);
+			entries.add(sign);
+			entries.add(door);
+			entries.add(wallSign);
+			entries.add(hangingSign);
+			entries.add(wallHangingSign);
+			entries.add(pressurePlate);
+			entries.add(fence);
+			entries.add(trapdoor);
+			entries.add(fenceGate);
+			entries.add(button);
+			entries.add(slab);
 		}
 	}
 	
@@ -92,9 +188,12 @@ public class SriasBlocks {
 	
 	public static void register() {
 		SriasTreeDecorators.register();
-		
-		for(WoodSet woodSet : WOOD_SETS) {
-			woodSet.register();
+
+		for (WoodSet set : WOOD_SETS) {
+			set.register();
+		}
+		for (SaplingSet set : SAPLING_SETS) {
+			set.register();
 		}
 		
 		// Non-flowers
@@ -158,8 +257,11 @@ public class SriasBlocks {
 	
 	@Environment(EnvType.CLIENT)
 	public static void registerClient() {
-		for(WoodSet woodSet : WOOD_SETS) {
-			woodSet.registerClient();
+		for (WoodSet set : WOOD_SETS) {
+			set.registerClient();
+		}
+		for (SaplingSet set : SAPLING_SETS) {
+			set.registerClient();
 		}
 		
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),

@@ -1,9 +1,11 @@
 {
   "itemGroup.srias_flowers.srias_flowers": "Sierra\u0027s Flowers",
-
-  "block.srias_flowers.dogwood_sapling": "Dogwood Sapling",
-  "block.srias_flowers.dogwood_carpet": "Dogwood Carpet",
-  "block.srias_flowers.dogwood_leaves": "Dogwood Leaves",
+  "block.srias_flowers.dogwood_sapling": "White Dogwood Sapling",
+  "block.srias_flowers.dogwood_carpet": "White Dogwood Carpet",
+  "block.srias_flowers.dogwood_leaves": "White Dogwood Leaves",
+  "block.srias_flowers.pink_dogwood_sapling": "Pink Dogwood Sapling",
+  "block.srias_flowers.pink_dogwood_carpet": "Pink Dogwood Carpet",
+  "block.srias_flowers.pink_dogwood_leaves": "Pink Dogwood Leaves",
   "block.srias_flowers.blue_wisteria_sapling": "Blue Blossom Sapling",
   "block.srias_flowers.blue_wisteria_carpet": "Blue Blossom Carpet",
   "block.srias_flowers.blue_wisteria_leaves": "Blue Blossom Leaves",
