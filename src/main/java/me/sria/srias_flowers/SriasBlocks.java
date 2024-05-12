@@ -83,8 +83,8 @@ public class SriasBlocks {
 		public Block wood;
 		public Block strippedWood;
 		public Block stairs;
-		public Block sign;
 		public Block door;
+		public Block sign;
 		public Block wallSign;
 		public Block hangingSign;
 		public Block wallHangingSign;
@@ -110,11 +110,23 @@ public class SriasBlocks {
 			wood = registerBlockWithBlockItem(name + "_wood", new PillarBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 			strippedWood = registerBlockWithBlockItem("stripped_" + name + "_wood", new PillarBlock(AbstractBlock.Settings.create().mapColor(topLogMapColor).instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 			stairs = registerBlockWithBlockItem(name + "_stairs", createStairsBlock(planks));
-			sign = registerBlockWithBlockItem(name + "_sign", new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable()));
-			door = registerBlockWithBlockItem(name + "_door", new DoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).instrument(Instrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY)));
-			wallSign = registerBlockWithBlockItem(name + "_wall_sign", new WallSignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).dropsLike(sign).burnable()));
-			hangingSign = registerBlockWithBlockItem(name + "_hanging_sign", new HangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable()));
-			wallHangingSign = registerBlockWithBlockItem(name + "_wall_hanging_sign", new WallHangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable().dropsLike(hangingSign)));
+
+			Block doorBlock = new DoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).instrument(Instrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY));
+			Item doorItem = new TallBlockItem(doorBlock, new Item.Settings());
+			door = registerBlockWithItem(name + "_door", doorBlock, doorItem);
+
+			Block signBlock = new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable());
+			Block wallSignBlock = new WallSignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).dropsLike(signBlock).burnable());
+			Item signItem = new SignItem((new Item.Settings()).maxCount(16), signBlock, wallSignBlock);
+			sign = registerBlockWithItem(name + "_sign", signBlock, signItem);
+			wallSign = registerBlock(name + "_wall_sign", wallSignBlock);
+
+			Block hangingSignBlock = new HangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable());
+			Block hangingSignWallBlock = new WallHangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable().dropsLike(hangingSignBlock));
+			Item hangingSignItem = new HangingSignItem(hangingSignBlock, hangingSignWallBlock, new Item.Settings().maxCount(16));
+			hangingSign = registerBlockWithItem(name + "_hanging_sign", hangingSignBlock, hangingSignItem);
+			wallHangingSign = registerBlock(name + "_wall_hanging_sign", hangingSignWallBlock);
+
 			pressurePlate = registerBlockWithBlockItem(name + "_pressure_plate", new PressurePlateBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(0.5F).burnable().pistonBehavior(PistonBehavior.DESTROY)));
 			fence = registerBlockWithBlockItem(name + "_fence", new FenceBlock(AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 			trapdoor = registerBlockWithBlockItem(name + "_trapdoor", new TrapdoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
@@ -209,7 +221,7 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("sunrise_daisy", SUNRISE_DAISY);
 		registerBlockWithBlockItem("himalayan_poppy", HIMALAYAN_POPPY);
 		registerBlockWithBlockItem("blue_hydrangea", BLUE_HYDRANGEA);
-		registerBlockWithBlockItem("seeding_dandelion", SEEDING_DANDELION, new SeedingDandelionItem(SEEDING_DANDELION, new FabricItemSettings()));
+		registerBlockWithItem("seeding_dandelion", SEEDING_DANDELION, new SeedingDandelionItem(SEEDING_DANDELION, new FabricItemSettings()));
 		registerBlockWithBlockItem("fleabane", FLEABANE);
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
 		registerBlockWithBlockItem("scarlet_flax", SCARLET_FLAX);
@@ -249,15 +261,15 @@ public class SriasBlocks {
 		Registry.register(Registries.ITEM, SriasFlowers.id(name), new BlockItem(block, new FabricItemSettings()));
 		return b;
 	}
-	
-	static Block registerBlockWithBlockItem(String name, Block block, BlockItem blockItem) {
+
+	static Block registerBlockWithItem(String name, Block block, Item item) {
 		Block b = Registry.register(Registries.BLOCK, SriasFlowers.id(name), block);
-		Registry.register(Registries.ITEM, SriasFlowers.id(name), blockItem);
+		Registry.register(Registries.ITEM, SriasFlowers.id(name), item);
 		return b;
 	}
-	
-	static void registerBlock(String name, Block block) {
-		Registry.register(Registries.BLOCK, SriasFlowers.id(name), block);
+
+	static Block registerBlock(String name, Block block) {
+		return Registry.register(Registries.BLOCK, SriasFlowers.id(name), block);
 	}
 	
 	@Environment(EnvType.CLIENT)
