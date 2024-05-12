@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_pressed",
+  "textures": {
+    "texture": "srias_flowers:block/dogwood_planks"
+  }
+}

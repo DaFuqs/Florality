@@ -1,0 +1,21 @@
+{
+  "type": "srias_flowers:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "srias_flowers:item",
+          "name": "minecraft:dogwood_stairs"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "srias_flowers:blocks/dogwood_stairs"
+}

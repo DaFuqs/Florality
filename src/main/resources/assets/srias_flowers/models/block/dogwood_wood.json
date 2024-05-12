@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "srias_flowers:block/dogwood_log",
+    "side": "srias_flowers:block/dogwood_log"
+  }
+}
