@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "srias_flowers:potted_dogwood_sapling",
+    "srias_flowers:potted_red_dogwood_sapling",
+    "srias_flowers:potted_blue_wisteria_sapling",
+    "srias_flowers:potted_purple_wisteria_sapling",
+
     "srias_flowers:potted_sunrise_daisy",
     "srias_flowers:potted_himalayan_poppy",
     "srias_flowers:potted_blue_hydrangea",

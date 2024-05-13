@@ -39,6 +39,7 @@ public class SriasBlocks {
 		private final MapColor mapColor;
 
 		public Block sapling;
+		public Block pottedSapling;
 		public Block leaves;
 		public Block leafCarpet;
 
@@ -51,15 +52,17 @@ public class SriasBlocks {
 			this.leaves = registerBlockWithBlockItem(name + "_leaves", new LeavesBlock(FabricBlockSettings.copyOf(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
 			this.leafCarpet = registerBlockWithBlockItem(name + "_carpet", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque()));
 			
+			
 			SaplingGenerator saplingGenerator = new SaplingGenerator("srias_" + name, Optional.empty(), Optional.of(RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, SriasFlowers.id(name + "_tree"))), Optional.empty());
 			this.sapling = registerBlockWithBlockItem(name + "_sapling", new SaplingBlock(saplingGenerator, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(mapColor)));
+			this.pottedSapling = registerBlock("potted_" + name + "_sapling", new FlowerPotBlock(sapling, FabricBlockSettings.copyOf(Blocks.POTTED_OAK_SAPLING)));
 			
 			FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
 			registry.add(leaves, 30, 60);
 		}
 		
 		public void registerClient() {
-			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), leafCarpet, sapling);
+			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), leafCarpet, sapling, pottedSapling);
 		}
 
 		public void addEntries(ItemGroup.Entries entries) {
