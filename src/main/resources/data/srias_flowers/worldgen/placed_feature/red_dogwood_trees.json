@@ -1,5 +1,5 @@
 {
-  "feature": "srias_flowers:dogwood_tree",
+  "feature": "srias_flowers:red_dogwood_tree",
   "placement": [
     {
       "type": "minecraft:count",
@@ -30,7 +30,7 @@
       "predicate": {
         "type": "minecraft:would_survive",
         "state": {
-          "Name": "srias_flowers:dogwood_sapling",
+          "Name": "srias_flowers:red_dogwood_sapling",
           "Properties": {
             "stage": "0"
           }

@@ -2,10 +2,15 @@
   "replace": false,
   "values": [
     "srias_flowers:blue_wisteria_leaves",
-    "srias_flowers:purple_wisteria_leaves",
-    "srias_flowers:dogwood_leaves",
     "srias_flowers:blue_wisteria_carpet",
+
+    "srias_flowers:purple_wisteria_leaves",
     "srias_flowers:purple_wisteria_carpet",
-    "srias_flowers:dogwood_carpet"
+
+    "srias_flowers:dogwood_leaves",
+    "srias_flowers:dogwood_carpet",
+
+    "srias_flowers:red_dogwood_leaves",
+    "srias_flowers:red_dogwood_carpet"
   ]
 }
