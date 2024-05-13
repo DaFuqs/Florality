@@ -53,6 +53,9 @@ public class SriasBlocks {
 			
 			SaplingGenerator saplingGenerator = new SaplingGenerator("srias_" + name, Optional.empty(), Optional.of(RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, SriasFlowers.id(name + "_tree"))), Optional.empty());
 			this.sapling = registerBlockWithBlockItem(name + "_sapling", new SaplingBlock(saplingGenerator, FabricBlockSettings.copyOf(Blocks.OAK_SAPLING).mapColor(mapColor)));
+			
+			FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
+			registry.add(leaves, 30, 60);
 		}
 		
 		public void registerClient() {
@@ -135,6 +138,18 @@ public class SriasBlocks {
 
 			StrippableBlockRegistry.register(log, strippedLog);
 			StrippableBlockRegistry.register(wood, strippedWood);
+			
+			FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
+			registry.add(planks, 5, 20);
+			registry.add(slab, 5, 20);
+			registry.add(fenceGate, 5, 20);
+			registry.add(fence, 5, 20);
+			registry.add(stairs, 5, 20);
+			registry.add(log, 5, 5);
+			registry.add(strippedLog, 5, 5);
+			registry.add(strippedWood, 5, 5);
+			registry.add(wood, 5, 5);
+			
 		}
 
 		private static Block createStairsBlock(Block base) {
@@ -153,9 +168,7 @@ public class SriasBlocks {
 			entries.add(stairs);
 			entries.add(sign);
 			entries.add(door);
-			entries.add(wallSign);
 			entries.add(hangingSign);
-			entries.add(wallHangingSign);
 			entries.add(pressurePlate);
 			entries.add(fence);
 			entries.add(trapdoor);
@@ -289,18 +302,22 @@ public class SriasBlocks {
 	}
 	
 	public static void registerFlammableBlocks() {
-		FlammableBlockRegistry.getDefaultInstance().add(SUNRISE_DAISY, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(HIMALAYAN_POPPY, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(BLUE_HYDRANGEA, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(FLEABANE, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(DUNE_GRASS, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(ALOE_VERA, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(OBAMA_PLANT, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(SCARLET_FLAX, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(CHACONIA, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(PERIWINKLE, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(WHITE_PERIWINKLE, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(PURPLE_PERIWINKLE, 60, 100);
+		FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
+		
+		registry.add(SUNRISE_DAISY, 60, 100);
+		registry.add(HIMALAYAN_POPPY, 60, 100);
+		registry.add(BLUE_HYDRANGEA, 60, 100);
+		registry.add(FLEABANE, 60, 100);
+		registry.add(DUNE_GRASS, 60, 100);
+		registry.add(ALOE_VERA, 60, 100);
+		registry.add(OBAMA_PLANT, 60, 100);
+		registry.add(SCARLET_FLAX, 60, 100);
+		registry.add(CHACONIA, 60, 100);
+		registry.add(PERIWINKLE, 60, 100);
+		registry.add(WHITE_PERIWINKLE, 60, 100);
+		registry.add(PURPLE_PERIWINKLE, 60, 100);
+		
+		
 	}
 	
 	
