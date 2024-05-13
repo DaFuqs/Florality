@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "srias_flowers:block/seeding_dandelion",
-    "particle": "srias_flowers:block/seeding_dandelion"
-  }
-}

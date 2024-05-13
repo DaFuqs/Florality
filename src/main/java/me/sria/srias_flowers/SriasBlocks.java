@@ -1,7 +1,6 @@
 package me.sria.srias_flowers;
 
 import me.sria.srias_flowers.blocks.*;
-import me.sria.srias_flowers.items.*;
 import me.sria.srias_flowers.tree_decorators.*;
 import net.fabricmc.api.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
@@ -169,7 +168,6 @@ public class SriasBlocks {
 	public static final Block SUNRISE_DAISY = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final Block HIMALAYAN_POPPY = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final Block BLUE_HYDRANGEA = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
-	public static final Block SEEDING_DANDELION = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final Block FLEABANE = new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY));
 	public static final Block DUNE_GRASS = new DuneGrassBlock(FabricBlockSettings.copyOf(Blocks.SHORT_GRASS));
 	public static final Block ALOE_VERA = new AloeVeraBlock(FabricBlockSettings.copyOf(Blocks.POPPY));
@@ -192,7 +190,6 @@ public class SriasBlocks {
 	public static final Block POTTED_SUNRISE_DAISY = new FlowerPotBlock(SUNRISE_DAISY, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_HIMALAYAN_POPPY = new FlowerPotBlock(HIMALAYAN_POPPY, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_BLUE_HYDRANGEA = new FlowerPotBlock(BLUE_HYDRANGEA, POTTED_PLANT_SETTINGS);
-	public static final Block POTTED_SEEDING_DANDELION = new FlowerPotBlock(SEEDING_DANDELION, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_FLEABANE = new FlowerPotBlock(FLEABANE, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_ALOE_VERA = new FlowerPotBlock(ALOE_VERA, POTTED_PLANT_SETTINGS);
 	public static final Block POTTED_SCARLET_FLAX = new FlowerPotBlock(SCARLET_FLAX, POTTED_PLANT_SETTINGS);
@@ -221,7 +218,6 @@ public class SriasBlocks {
 		registerBlockWithBlockItem("sunrise_daisy", SUNRISE_DAISY);
 		registerBlockWithBlockItem("himalayan_poppy", HIMALAYAN_POPPY);
 		registerBlockWithBlockItem("blue_hydrangea", BLUE_HYDRANGEA);
-		registerBlockWithItem("seeding_dandelion", SEEDING_DANDELION, new SeedingDandelionItem(SEEDING_DANDELION, new FabricItemSettings()));
 		registerBlockWithBlockItem("fleabane", FLEABANE);
 		registerBlockWithBlockItem("aloe_vera", ALOE_VERA);
 		registerBlockWithBlockItem("scarlet_flax", SCARLET_FLAX);
@@ -244,7 +240,6 @@ public class SriasBlocks {
 		registerBlock("potted_sunrise_daisy", POTTED_SUNRISE_DAISY);
 		registerBlock("potted_himalayan_poppy", POTTED_HIMALAYAN_POPPY);
 		registerBlock("potted_blue_hydrangea", POTTED_BLUE_HYDRANGEA);
-		registerBlock("potted_seeding_dandelion", POTTED_SEEDING_DANDELION);
 		registerBlock("potted_fleabane", POTTED_FLEABANE);
 		registerBlock("potted_aloe_vera", POTTED_ALOE_VERA);
 		registerBlock("potted_scarlet_flax", POTTED_SCARLET_FLAX);
@@ -282,14 +277,12 @@ public class SriasBlocks {
 		}
 		
 		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
-				SUNRISE_DAISY, HIMALAYAN_POPPY,
-				BLUE_HYDRANGEA, SEEDING_DANDELION,
+				SUNRISE_DAISY, HIMALAYAN_POPPY, BLUE_HYDRANGEA,
 				FLEABANE, DUNE_GRASS, ALOE_VERA, HONEYSUCKLE,
 				SCARLET_FLAX, CHACONIA, PERIWINKLE, PURPLE_PERIWINKLE, WHITE_PERIWINKLE,
 				FELICIA_DAISY, FLAME_ORCHID, GERBERA_DAISY, ORANGE_ZINNIA, PINK_ALLIUM, PINK_ORCHID, PINK_ZINNIA,
 				
-				POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY,
-				POTTED_BLUE_HYDRANGEA, POTTED_SEEDING_DANDELION,
+				POTTED_SUNRISE_DAISY, POTTED_HIMALAYAN_POPPY, POTTED_BLUE_HYDRANGEA,
 				POTTED_FLEABANE, POTTED_ALOE_VERA, POTTED_SCARLET_FLAX,
 				POTTED_FELICIA_DAISY, POTTED_FLAME_ORCHID, POTTED_GERBERA_DAISY, POTTED_PINK_ALLIUM, POTTED_PINK_ORCHID
 		);
@@ -299,7 +292,6 @@ public class SriasBlocks {
 		FlammableBlockRegistry.getDefaultInstance().add(SUNRISE_DAISY, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(HIMALAYAN_POPPY, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(BLUE_HYDRANGEA, 60, 100);
-		FlammableBlockRegistry.getDefaultInstance().add(SEEDING_DANDELION, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(FLEABANE, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(DUNE_GRASS, 60, 100);
 		FlammableBlockRegistry.getDefaultInstance().add(ALOE_VERA, 60, 100);

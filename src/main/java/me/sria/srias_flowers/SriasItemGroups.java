@@ -11,7 +11,6 @@ public class SriasItemGroups {
 		entries.add(SriasBlocks.SUNRISE_DAISY);
 		entries.add(SriasBlocks.HIMALAYAN_POPPY);
 		entries.add(SriasBlocks.BLUE_HYDRANGEA);
-		entries.add(SriasBlocks.SEEDING_DANDELION);
 		entries.add(SriasBlocks.FLEABANE);
 		entries.add(SriasBlocks.DUNE_GRASS);
 		entries.add(SriasBlocks.ALOE_VERA);

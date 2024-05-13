@@ -30,7 +30,6 @@
 
   "block.srias_flowers.fleabane": "Fleabane",
   "block.srias_flowers.sunrise_daisy": "Sunrise Daisy",
-  "block.srias_flowers.seeding_dandelion": "Seeding Dandelion",
   "block.srias_flowers.blue_hydrangea": "Blue Hydrangea",
   "block.srias_flowers.aloe_vera": "Aloe Vera",
   "block.srias_flowers.dune_grass": "Dune Grass",
@@ -52,7 +51,6 @@
 
   "block.srias_flowers.potted_fleabane": "Potted Fleabane",
   "block.srias_flowers.potted_sunrise_daisy": "Potted Sunrise Daisy",
-  "block.srias_flowers.potted_seeding_dandelion": "Potted Seeding Dandelion",
   "block.srias_flowers.potted_blue_hydrangea": "Potted Blue Hydrangea",
   "block.srias_flowers.potted_aloe_vera": "Potted Aloe Vera",
   "block.srias_flowers.potted_obama_plant": "Potted Obama Plant",
@@ -68,8 +66,6 @@
   "advancements.sierras_flowers_advancement.descr": "Explore the fascinating wonders of flowers!",
   "advancements.skin_remedy.title": "Skin Remedy",
   "advancements.skin_remedy.descr": "As long as you take the thorns out of the Aloe Vera before using it!",
-  "advancements.you_cant_blow_it.title": "You Can Blow It!",
-  "advancements.you_cant_blow_it.descr": "Obtain a Seeding Dandelion",
   "advancements.not_honey.title": "It\u0027s Not Honey",
   "advancements.not_honey.descr": "It\u0027s Not Honey"
 }
