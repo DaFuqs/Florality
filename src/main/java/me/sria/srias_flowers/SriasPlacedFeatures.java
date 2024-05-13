@@ -13,7 +13,6 @@ public class SriasPlacedFeatures {
 	public static RegistryKey<PlacedFeature> SUNRISE_DAISY = of("sunrise_daisy");
 	public static RegistryKey<PlacedFeature> HIMALAYAN_POPPY = of("himalayan_poppy");
 	public static RegistryKey<PlacedFeature> BLUE_HYDRANGEA = of("blue_hydrangea");
-	public static RegistryKey<PlacedFeature> SEEDING_DANDELION = of("seeding_dandelion");
 	public static RegistryKey<PlacedFeature> FLEABANE = of("fleabane");
 	public static RegistryKey<PlacedFeature> DUNE_GRASS = of("dune_grass");
 	public static RegistryKey<PlacedFeature> ALOE_VERA = of("aloe_vera");
@@ -46,7 +45,6 @@ public class SriasPlacedFeatures {
 	static void addBiomeModifications() {
 		// Sierras
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_HILL), GenerationStep.Feature.VEGETAL_DECORATION, HIMALAYAN_POPPY);
-		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SEEDING_DANDELION);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT), GenerationStep.Feature.VEGETAL_DECORATION, DUNE_GRASS);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT), GenerationStep.Feature.VEGETAL_DECORATION, ALOE_VERA);

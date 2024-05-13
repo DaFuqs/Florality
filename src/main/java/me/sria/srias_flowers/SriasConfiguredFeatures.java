@@ -5,8 +5,6 @@ import net.minecraft.world.gen.feature.*;
 
 public class SriasConfiguredFeatures {
 	
-	public static RegistryKey<ConfiguredFeature<?, ?>> SEEDING_DANDELION = of("seeding_dandelion");
-	
 	public static RegistryKey<ConfiguredFeature<?, ?>> of(String id) {
 		return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, SriasFlowers.id(id));
 	}
