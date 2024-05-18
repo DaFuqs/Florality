@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "srias_flowers:blue_sage"
+    }
+  ],
+  "result": {
+    "item": "minecraft:blue_dye",
+    "count": 2
+  }
+}
