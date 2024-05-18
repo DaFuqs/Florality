@@ -1,5 +1,6 @@
 package me.sria.srias_flowers;
 
+import me.sria.srias_flowers.tree_decorators.*;
 import net.fabricmc.api.*;
 import net.minecraft.util.*;
 
@@ -16,7 +17,7 @@ public class SriasFlowers implements ModInitializer {
 	public void onInitialize() {
 		SriasBlocks.register();
 		SriasItems.register();
-		SriasBlocks.registerFlammableBlocks();
+		SriasTreeDecorators.register();
 		SriasPlacedFeatures.addBiomeModifications();
 		SriasItemGroups.register();
 	}

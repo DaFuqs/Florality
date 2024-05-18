@@ -17,7 +17,6 @@ public class SriasPlacedFeatures {
 	public static RegistryKey<PlacedFeature> DUNE_GRASS = of("dune_grass");
 	public static RegistryKey<PlacedFeature> ALOE_VERA = of("aloe_vera");
 	public static RegistryKey<PlacedFeature> CHACONIA = of("chaconia");
-	public static RegistryKey<PlacedFeature> PERIWINKLE = of("periwinkle");
 	public static RegistryKey<PlacedFeature> WHITE_PERIWINKLE = of("white_periwinkle");
 	public static RegistryKey<PlacedFeature> PURPLE_PERIWINKLE = of("purple_periwinkle");
 	public static RegistryKey<PlacedFeature> SCARLET_FLAX_COMMON = of("scarlet_flax_common");
@@ -59,10 +58,8 @@ public class SriasPlacedFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, FLEABANE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_HYDRANGEA);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, SCARLET_FLAX_COMMON);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_PERIWINKLE);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SUNRISE_DAISY);
