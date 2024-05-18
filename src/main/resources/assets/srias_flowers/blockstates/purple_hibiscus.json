@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "srias_flowers:block/purple_hibiscus_bottom"
+    },
+    "half=upper": {
+      "model": "srias_flowers:block/purple_hibiscus_top"
+    }
+  }
+}

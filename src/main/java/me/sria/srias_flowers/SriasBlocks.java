@@ -52,6 +52,13 @@ public class SriasBlocks {
 		add(new TallFlowerSet("chaconia"));
 		add(new TallFlowerSet("orange_zinnia"));
 		add(new TallFlowerSet("pink_zinnia"));
+		
+		add(new TallFlowerSet("blue_sage"));
+		add(new TallFlowerSet("butterfly_weed"));
+		add(new TallFlowerSet("fuchsia"));
+		add(new TallFlowerSet("larkspur"));
+		add(new TallFlowerSet("mountain_laurel"));
+		add(new TallFlowerSet("purple_hibiscus"));
 	}};
 	
 	public static List<List<? extends BlockSet>> ALL_SETS = new ArrayList<>() {{

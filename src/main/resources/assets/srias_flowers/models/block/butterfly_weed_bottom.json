@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "srias_flowers:block/butterfly_weed_bottom"
+  }
+}

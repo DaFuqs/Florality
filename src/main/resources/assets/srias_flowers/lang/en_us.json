@@ -37,16 +37,13 @@
   "block.srias_flowers.himalayan_poppy": "Himalayan Poppy",
   "block.srias_flowers.honeysuckle": "Honeysuckle",
   "block.srias_flowers.scarlet_flax": "Scarlet Flax",
-  "block.srias_flowers.chaconia": "Chaconia",
   "block.srias_flowers.white_periwinkle": "White Periwinkle",
   "block.srias_flowers.purple_periwinkle": "Purple Periwinkle",
   "block.srias_flowers.felicia_daisy": "Felicia Daisy",
   "block.srias_flowers.flame_orchid": "Flame Orchid",
   "block.srias_flowers.gerbera_daisy": "Gerbera Daisy",
-  "block.srias_flowers.orange_zinnia": "Orange Zinnia",
   "block.srias_flowers.pink_allium": "Pink Allium",
   "block.srias_flowers.pink_orchid": "Pink Orchid",
-  "block.srias_flowers.pink_zinnia": "Pink Zinnia",
 
   "block.srias_flowers.potted_fleabane": "Potted Fleabane",
   "block.srias_flowers.potted_sunrise_daisy": "Potted Sunrise Daisy",
@@ -60,6 +57,16 @@
   "block.srias_flowers.potted_gerbera_daisy": "Potted Gerbera Daisy",
   "block.srias_flowers.potted_pink_allium": "Potted Pink Allium",
   "block.srias_flowers.potted_pink_orchid": "Potted Pink Orchid",
+
+  "block.srias_flowers.chaconia": "Chaconia",
+  "block.srias_flowers.orange_zinnia": "Orange Zinnia",
+  "block.srias_flowers.pink_zinnia": "Pink Zinnia",
+  "block.srias_flowers.blue_sage": "Blue Sage",
+  "block.srias_flowers.butterfly_weed": "Butterfly Weed",
+  "block.srias_flowers.fuchsia": "Fuchsia",
+  "block.srias_flowers.larkspur": "Larkspur",
+  "block.srias_flowers.mountain_laurel": "Mountain Laurel",
+  "block.srias_flowers.purple_hibiscus": "Purple Hibiscus",
 
   "advancements.skin_remedy.title": "Skin Remedy",
   "advancements.skin_remedy.descr": "As long as you take the thorns out of the Aloe Vera before using it!"
