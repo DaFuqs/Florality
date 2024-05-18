@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "srias_flowers:felicia_daisy"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_dye",
+    "count": 2
+  }
+}
