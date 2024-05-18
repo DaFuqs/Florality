@@ -38,14 +38,14 @@ public class SriasBlocks {
 		add(new SmallFlowerSet("fleabane"));
 		add(new SmallFlowerSet("scarlet_flax"));
 		add(new SmallFlowerSet("obama_plant"));
-		add(new SmallFlowerSet("white_periwinkle", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.POPPY))));
-		add(new SmallFlowerSet("purple_periwinkle", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.POPPY))));
+		add(new SmallFlowerSet("white_periwinkle", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.POPPY)), false));
+		add(new SmallFlowerSet("purple_periwinkle", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.POPPY)), false));
 		add(new SmallFlowerSet("felicia_daisy"));
 		add(new SmallFlowerSet("flame_orchid"));
 		add(new SmallFlowerSet("gerbera_daisy"));
 		add(new SmallFlowerSet("pink_allium"));
 		add(new SmallFlowerSet("pink_orchid"));
-		add(new SmallFlowerSet("aloe_vera", new AloeVeraBlock(FabricBlockSettings.copyOf(Blocks.POPPY))));
+		add(new SmallFlowerSet("aloe_vera", new AloeVeraBlock(FabricBlockSettings.copyOf(Blocks.POPPY)), true));
 	}};
 	
 	public static List<TallFlowerSet> TALL_FLOWER_SETS = new ArrayList<>() {{
@@ -120,28 +120,35 @@ public class SriasBlocks {
 		private static final AbstractBlock.Settings POTTED_PLANT_SETTINGS = FabricBlockSettings.copyOf(Blocks.POTTED_POPPY);
 		
 		private final String name;
+		private final boolean canBePotted;
 		
 		public Block block;
 		public Block pottedBlock;
 		
 		public SmallFlowerSet(String name) {
-			this(name, new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY)));
+			this(name, new FlowerBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY)), true);
 		}
 		
-		public SmallFlowerSet(String name, Block block) {
+		public SmallFlowerSet(String name, Block block, boolean canBePotted) {
 			this.name = name;
 			this.block = block;
+			this.canBePotted = canBePotted;
 		}
 		
 		public void register() {
 			this.block = registerBlockWithBlockItem(name, block);
-			this.pottedBlock = registerBlock("potted_" + name, new FlowerPotBlock(block, POTTED_PLANT_SETTINGS));
+			if (canBePotted) {
+				this.pottedBlock = registerBlock("potted_" + name, new FlowerPotBlock(block, POTTED_PLANT_SETTINGS));
+			}
 			
 			FlammableBlockRegistry.getDefaultInstance().add(block, 60, 100);
 		}
 		
 		public void registerClient() {
-			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), block, pottedBlock);
+			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), block);
+			if (canBePotted) {
+				BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), block);
+			}
 		}
 		
 		public void addEntries(ItemGroup.Entries entries) {
