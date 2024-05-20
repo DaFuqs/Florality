@@ -38,8 +38,8 @@ public class SriasBlocks {
 		add(new SmallFlowerSet("fleabane"));
 		add(new SmallFlowerSet("scarlet_flax"));
 		add(new SmallFlowerSet("obama_plant"));
-		add(new SmallFlowerSet("white_periwinkle", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.POPPY)), false));
-		add(new SmallFlowerSet("purple_periwinkle", new LeafCarpetBlock(FabricBlockSettings.copyOf(Blocks.POPPY)), false));
+		add(new SmallFlowerSet("white_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY)), false));
+		add(new SmallFlowerSet("purple_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY)), false));
 		add(new SmallFlowerSet("felicia_daisy"));
 		add(new SmallFlowerSet("flame_orchid"));
 		add(new SmallFlowerSet("gerbera_daisy"));
