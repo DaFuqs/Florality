@@ -31,6 +31,12 @@ public class SriasPlacedFeatures {
 	public static RegistryKey<PlacedFeature> PINK_ORCHID = of("pink_orchid");
 	public static RegistryKey<PlacedFeature> PINK_ORCHID_JUNGLE = of("pink_orchid_jungle");
 	public static RegistryKey<PlacedFeature> PINK_ZINNIA = of("pink_zinnia");
+	public static RegistryKey<PlacedFeature> PURPLE_HIBISCUS = of("purple_hibiscus");
+	public static RegistryKey<PlacedFeature> MOUNTAIN_LAUREL = of("mountain_laurel");
+	public static RegistryKey<PlacedFeature> LARKSPUR = of("larkspur");
+	public static RegistryKey<PlacedFeature> FUCHSIA = of("fuchsia");
+	public static RegistryKey<PlacedFeature> BLUE_SAGE = of("blue_sage");
+	public static RegistryKey<PlacedFeature> BUTTERFLY_WEED = of("butterfly_weed");
 	
 	public static RegistryKey<PlacedFeature> of(String id) {
 		return RegistryKey.of(RegistryKeys.PLACED_FEATURE, SriasFlowers.id(id));
@@ -64,6 +70,25 @@ public class SriasPlacedFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, WHITE_PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_PERIWINKLE);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, SUNRISE_DAISY);
+		
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_HIBISCUS);
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PURPLE_HIBISCUS);
+		
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, MOUNTAIN_LAUREL);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, MOUNTAIN_LAUREL);
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_FOREST, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA), GenerationStep.Feature.VEGETAL_DECORATION, MOUNTAIN_LAUREL);
+		
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST), GenerationStep.Feature.VEGETAL_DECORATION, LARKSPUR);
+		
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, FUCHSIA);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, FUCHSIA);
+		
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_SAGE);
+		
+		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, BUTTERFLY_WEED);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, BUTTERFLY_WEED);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.FLOWER_FORESTS), GenerationStep.Feature.VEGETAL_DECORATION, BUTTERFLY_WEED);
+		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.WINDSWEPT_SAVANNA), GenerationStep.Feature.VEGETAL_DECORATION, BUTTERFLY_WEED);
 		
 		// More vanilla flowers
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_TULIP);
