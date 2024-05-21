@@ -27,7 +27,6 @@ public class SriasPlacedFeatures {
 	public static RegistryKey<PlacedFeature> GERBERA_DAISY = of("gerbera_daisy");
 	public static RegistryKey<PlacedFeature> ORANGE_ZINNIA = of("orange_zinnia");
 	public static RegistryKey<PlacedFeature> PINK_ALLIUM = of("pink_allium");
-	public static RegistryKey<PlacedFeature> PINK_ALLIUM_RARE = of("pink_allium_rare");
 	public static RegistryKey<PlacedFeature> PINK_ORCHID = of("pink_orchid");
 	public static RegistryKey<PlacedFeature> PINK_ORCHID_JUNGLE = of("pink_orchid_jungle");
 	public static RegistryKey<PlacedFeature> PINK_ZINNIA = of("pink_zinnia");
@@ -50,7 +49,6 @@ public class SriasPlacedFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.DESERT), GenerationStep.Feature.VEGETAL_DECORATION, ALOE_VERA);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, CHACONIA);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, SCARLET_FLAX_RARE);
-		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.PLAINS), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ALLIUM_RARE);
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.DARK_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ALLIUM);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, FLAME_ORCHID);
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_ORCHID);
