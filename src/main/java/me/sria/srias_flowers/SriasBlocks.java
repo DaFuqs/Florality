@@ -326,6 +326,8 @@ public class SriasBlocks {
 				entry.registerClient();
 			}
 		}
+		
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), DUNE_GRASS, HONEYSUCKLE);
 	}
 	
 }
