@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "bottom": "srias_flowers:block/dogwood_planks",
-    "side": "srias_flowers:block/dogwood_planks",
-    "top": "srias_flowers:block/dogwood_planks"
-  }
-}

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "rosies_flowers:block/chaconia_bottom"
+  }
+}

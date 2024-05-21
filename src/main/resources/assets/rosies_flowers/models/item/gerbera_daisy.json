@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "rosies_flowers:block/gerbera_daisy"
+  }
+}

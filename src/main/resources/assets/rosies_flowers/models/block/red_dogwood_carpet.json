@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "rosies_flowers:block/red_dogwood_leaves"
+  }
+}

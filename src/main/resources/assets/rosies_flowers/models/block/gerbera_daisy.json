@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "rosies_flowers:block/gerbera_daisy",
+    "particle": "rosies_flowers:block/gerbera_daisy"
+  }
+}

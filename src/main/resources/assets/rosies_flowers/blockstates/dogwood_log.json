@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "rosies_flowers:block/dogwood_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "rosies_flowers:block/dogwood_log"
+    },
+    "axis=z": {
+      "model": "rosies_flowers:block/dogwood_log_horizontal",
+      "x": 90
+    }
+  }
+}

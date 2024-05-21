@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_side",
+  "textures": {
+    "texture": "rosies_flowers:block/dogwood_planks"
+  }
+}
