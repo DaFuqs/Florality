@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "srias_flowers:block/purple_hibiscus_top"
-  }
-}

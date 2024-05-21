@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "rosies_flowers:block/fuchsia_bottom"
+    },
+    "half=upper": {
+      "model": "rosies_flowers:block/fuchsia_top"
+    }
+  }
+}

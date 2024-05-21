@@ -1,22 +1,22 @@
 {
   "replace": false,
   "values": [
-    "srias_flowers:potted_dogwood_sapling",
-    "srias_flowers:potted_red_dogwood_sapling",
-    "srias_flowers:potted_blue_wisteria_sapling",
-    "srias_flowers:potted_purple_wisteria_sapling",
+    "rosies_flowers:potted_dogwood_sapling",
+    "rosies_flowers:potted_red_dogwood_sapling",
+    "rosies_flowers:potted_blue_wisteria_sapling",
+    "rosies_flowers:potted_purple_wisteria_sapling",
 
-    "srias_flowers:potted_sunrise_daisy",
-    "srias_flowers:potted_himalayan_poppy",
-    "srias_flowers:potted_blue_hydrangea",
-    "srias_flowers:potted_fleabane",
-    "srias_flowers:potted_aloe_vera",
-    "srias_flowers:potted_scarlet_flax",
-    "srias_flowers:potted_obama_plant",
-    "srias_flowers:potted_felicia_daisy",
-    "srias_flowers:potted_flame_orchid",
-    "srias_flowers:potted_gerbera_daisy",
-    "srias_flowers:potted_pink_allium",
-    "srias_flowers:potted_pink_orchid"
+    "rosies_flowers:potted_sunrise_daisy",
+    "rosies_flowers:potted_himalayan_poppy",
+    "rosies_flowers:potted_blue_hydrangea",
+    "rosies_flowers:potted_fleabane",
+    "rosies_flowers:potted_aloe_vera",
+    "rosies_flowers:potted_scarlet_flax",
+    "rosies_flowers:potted_obama_plant",
+    "rosies_flowers:potted_felicia_daisy",
+    "rosies_flowers:potted_flame_orchid",
+    "rosies_flowers:potted_gerbera_daisy",
+    "rosies_flowers:potted_pink_allium",
+    "rosies_flowers:potted_pink_orchid"
   ]
 }

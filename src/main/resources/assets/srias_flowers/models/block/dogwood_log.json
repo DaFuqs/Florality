@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "srias_flowers:block/dogwood_log_top",
-    "side": "srias_flowers:block/dogwood_log"
-  }
-}

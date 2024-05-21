@@ -1,19 +1,19 @@
 {
   "replace": false,
   "values": [
-    "srias_flowers:sunrise_daisy",
-    "srias_flowers:himalayan_poppy",
-    "srias_flowers:blue_hydrangea",
-    "srias_flowers:fleabane",
-    "srias_flowers:obama_plant",
-    "srias_flowers:aloe_vera",
-    "srias_flowers:scarlet_flax",
-    "srias_flowers:white_periwinkle",
-    "srias_flowers:purple_periwinkle",
-    "srias_flowers:felicia_daisy",
-    "srias_flowers:flame_orchid",
-    "srias_flowers:gerbera_daisy",
-    "srias_flowers:pink_allium",
-    "srias_flowers:pink_orchid"
+    "rosies_flowers:sunrise_daisy",
+    "rosies_flowers:himalayan_poppy",
+    "rosies_flowers:blue_hydrangea",
+    "rosies_flowers:fleabane",
+    "rosies_flowers:obama_plant",
+    "rosies_flowers:aloe_vera",
+    "rosies_flowers:scarlet_flax",
+    "rosies_flowers:white_periwinkle",
+    "rosies_flowers:purple_periwinkle",
+    "rosies_flowers:felicia_daisy",
+    "rosies_flowers:flame_orchid",
+    "rosies_flowers:gerbera_daisy",
+    "rosies_flowers:pink_allium",
+    "rosies_flowers:pink_orchid"
   ]
 }

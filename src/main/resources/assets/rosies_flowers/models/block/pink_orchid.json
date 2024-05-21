@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "rosies_flowers:block/pink_orchid",
+    "particle": "rosies_flowers:block/pink_orchid"
+  }
+}

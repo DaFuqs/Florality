@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_left_open",
+  "textures": {
+    "bottom": "rosies_flowers:block/dogwood_door_bottom",
+    "top": "rosies_flowers:block/dogwood_door_top"
+  }
+}

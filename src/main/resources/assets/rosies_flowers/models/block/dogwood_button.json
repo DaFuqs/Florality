@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "rosies_flowers:block/dogwood_planks"
+  }
+}

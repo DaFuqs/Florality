@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "rosies_flowers:block/dogwood_planks",
+    "side": "rosies_flowers:block/dogwood_planks",
+    "top": "rosies_flowers:block/dogwood_planks"
+  }
+}
