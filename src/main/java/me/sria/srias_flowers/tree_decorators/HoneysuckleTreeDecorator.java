@@ -11,7 +11,7 @@ import org.jetbrains.annotations.*;
 
 public class HoneysuckleTreeDecorator extends TreeDecorator {
 	
-	public static final Codec<HoneysuckleTreeDecorator> CODEC = BlockStateProvider.TYPE_CODEC.fieldOf("block_provider").xmap(HoneysuckleTreeDecorator::new, (decorator) -> decorator.provider).codec();
+	public static final MapCodec<HoneysuckleTreeDecorator> CODEC = BlockStateProvider.TYPE_CODEC.fieldOf("block_provider").xmap(HoneysuckleTreeDecorator::new, (decorator) -> decorator.provider);
 	private final BlockStateProvider provider;
 	
 	public HoneysuckleTreeDecorator(BlockStateProvider provider) {

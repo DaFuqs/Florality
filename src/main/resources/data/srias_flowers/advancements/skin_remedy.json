@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "srias_flowers:aloe_vera"
+      "id": "srias_flowers:aloe_vera"
     },
     "title": {
       "translate": "advancements.skin_remedy.title"
@@ -20,9 +20,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "srias_flowers:aloe_vera"
-            ]
+            "items": "srias_flowers:aloe_vera"
           }
         ]
       }

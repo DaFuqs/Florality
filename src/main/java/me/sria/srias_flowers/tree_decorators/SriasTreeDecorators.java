@@ -7,16 +7,15 @@ import net.minecraft.world.gen.treedecorator.*;
 
 public class SriasTreeDecorators {
 	
-	static TreeDecoratorType<LeafCarpetTreeDecorator> LEAF_CARPET_DECORATOR;
-	static TreeDecoratorType<LeafCarpetTreeDecorator> HONEYSUCKLE_DECORATOR;
+	static TreeDecoratorType<LeafCarpetTreeDecorator> LEAF_CARPET_DECORATOR = register("leaf_carpet", LeafCarpetTreeDecorator.CODEC);
+	static TreeDecoratorType<HoneysuckleTreeDecorator> HONEYSUCKLE_DECORATOR = register("honeysuckle", HoneysuckleTreeDecorator.CODEC);
 	
 	public static void register() {
-		register("leaf_carpet", LeafCarpetTreeDecorator.CODEC);
-		register("honeysuckle", HoneysuckleTreeDecorator.CODEC);
+	
 	}
 	
-	private static <P extends TreeDecorator> TreeDecoratorType<P> register(String id, Codec<P> codec) {
-		return Registry.register(Registries.TREE_DECORATOR_TYPE, SriasFlowers.id(id), new TreeDecoratorType(codec));
+	private static <P extends TreeDecorator> TreeDecoratorType<P> register(String id, MapCodec<P> codec) {
+		return Registry.register(Registries.TREE_DECORATOR_TYPE, SriasFlowers.id(id), new TreeDecoratorType<P>(codec));
 	}
 	
 }

@@ -13,8 +13,8 @@
     "###"
   ],
   "result": {
-    "count": 4,
-    "item": "srias_flowers:dogwood_stairs"
+    "id": "srias_flowers:dogwood_stairs",
+    "count": 4
   },
   "show_notification": true
 }

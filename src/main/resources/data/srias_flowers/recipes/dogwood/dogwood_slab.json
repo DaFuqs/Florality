@@ -11,8 +11,8 @@
     "###"
   ],
   "result": {
-    "count": 6,
-    "item": "srias_flowers:dogwood_slab"
+    "id": "srias_flowers:dogwood_slab",
+    "count": 6
   },
   "show_notification": true
 }

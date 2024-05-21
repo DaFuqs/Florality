@@ -3,7 +3,6 @@ package me.sria.srias_flowers;
 import me.sria.srias_flowers.blocks.*;
 import net.fabricmc.api.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
-import net.fabricmc.fabric.api.item.v1.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.*;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.*;
 import net.fabricmc.fabric.api.registry.*;
@@ -305,7 +304,7 @@ public class SriasBlocks {
 	
 	static Block registerBlockWithBlockItem(String name, Block block) {
 		Block b = Registry.register(Registries.BLOCK, SriasFlowers.id(name), block);
-		Registry.register(Registries.ITEM, SriasFlowers.id(name), new BlockItem(block, new FabricItemSettings()));
+		Registry.register(Registries.ITEM, SriasFlowers.id(name), new BlockItem(block, new Item.Settings()));
 		return b;
 	}
 

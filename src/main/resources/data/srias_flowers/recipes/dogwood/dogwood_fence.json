@@ -15,8 +15,8 @@
     "W#W"
   ],
   "result": {
-    "count": 3,
-    "item": "srias_flowers:dogwood_fence"
+    "id": "srias_flowers:dogwood_fence",
+    "count": 3
   },
   "show_notification": true
 }

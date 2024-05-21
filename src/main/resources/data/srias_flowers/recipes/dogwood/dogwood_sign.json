@@ -16,8 +16,8 @@
     " X "
   ],
   "result": {
-    "count": 3,
-    "item": "srias_flowers:dogwood_sign"
+    "id": "srias_flowers:dogwood_sign",
+    "count": 3
   },
   "show_notification": true
 }

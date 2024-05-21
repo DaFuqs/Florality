@@ -13,7 +13,7 @@ import java.util.*;
 
 public class LeafCarpetTreeDecorator extends TreeDecorator {
 	
-	public static final Codec<LeafCarpetTreeDecorator> CODEC = BlockStateProvider.TYPE_CODEC.fieldOf("block_provider").xmap(LeafCarpetTreeDecorator::new, (decorator) -> decorator.provider).codec();
+	public static final MapCodec<LeafCarpetTreeDecorator> CODEC = BlockStateProvider.TYPE_CODEC.fieldOf("block_provider").xmap(LeafCarpetTreeDecorator::new, (decorator) -> decorator.provider);
 	private final BlockStateProvider provider;
 	private final static int MAX_DEPTH = 10;
 	
@@ -29,7 +29,7 @@ public class LeafCarpetTreeDecorator extends TreeDecorator {
 		Random random = generator.getRandom();
 		
 		List<BlockPos> leavesPositions = generator.getLeavesPositions();
-		if (leavesPositions.size() == 0) {
+		if (leavesPositions.isEmpty()) {
 			return;
 		}
 		

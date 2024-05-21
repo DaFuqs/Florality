@@ -12,8 +12,8 @@
     "##"
   ],
   "result": {
-    "count": 3,
-    "item": "srias_flowers:dogwood_wood"
+    "id": "srias_flowers:dogwood_wood",
+    "count": 3
   },
   "show_notification": true
 }

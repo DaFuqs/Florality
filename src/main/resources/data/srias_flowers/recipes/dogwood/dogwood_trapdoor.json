@@ -12,8 +12,8 @@
     "###"
   ],
   "result": {
-    "count": 2,
-    "item": "srias_flowers:dogwood_trapdoor"
+    "id": "srias_flowers:dogwood_trapdoor",
+    "count": 2
   },
   "show_notification": true
 }
