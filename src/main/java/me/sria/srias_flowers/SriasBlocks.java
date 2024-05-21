@@ -260,7 +260,6 @@ public class SriasBlocks {
 			registry.add(strippedLog, 5, 5);
 			registry.add(strippedWood, 5, 5);
 			registry.add(wood, 5, 5);
-			
 		}
 
 		private static Block createStairsBlock(Block base) {
@@ -276,9 +275,10 @@ public class SriasBlocks {
 			entries.add(log);
 			entries.add(strippedLog);
 			entries.add(wood);
+			entries.add(strippedWood);
 			entries.add(stairs);
-			entries.add(sign);
 			entries.add(door);
+			entries.add(sign);
 			entries.add(hangingSign);
 			entries.add(pressurePlate);
 			entries.add(fence);
