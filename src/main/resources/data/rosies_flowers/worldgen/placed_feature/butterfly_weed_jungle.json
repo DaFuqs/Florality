@@ -1,9 +1,9 @@
 {
-  "feature": "rosies_flowers:orange_zinnia",
+  "feature": "rosies_flowers:butterfly_weed",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 12
+      "chance": 8
     },
     {
       "type": "minecraft:in_square"
