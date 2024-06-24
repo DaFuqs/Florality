@@ -1,9 +1,9 @@
 {
-  "feature": "rosies_flowers:flame_orchid",
+  "feature": "rosies_flowers:purple_hibiscus",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 6
+      "chance": 8
     },
     {
       "type": "minecraft:in_square"

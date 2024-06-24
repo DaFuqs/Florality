@@ -1,9 +1,9 @@
 {
-  "feature": "rosies_flowers:fleabane",
+  "feature": "rosies_flowers:fuchsia",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 17
+      "chance": 8
     },
     {
       "type": "minecraft:in_square"

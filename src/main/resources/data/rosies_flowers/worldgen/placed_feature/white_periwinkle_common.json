@@ -1,9 +1,9 @@
 {
-  "feature": "rosies_flowers:pink_zinnia",
+  "feature": "rosies_flowers:white_periwinkle",
   "placement": [
     {
       "type": "minecraft:rarity_filter",
-      "chance": 12
+      "chance": 8
     },
     {
       "type": "minecraft:in_square"
