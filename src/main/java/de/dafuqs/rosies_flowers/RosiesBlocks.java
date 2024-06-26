@@ -44,7 +44,7 @@ public class RosiesBlocks {
 		add(new SmallFlowerSet("gerbera_daisy"));
 		add(new SmallFlowerSet("pink_allium"));
 		add(new SmallFlowerSet("pink_orchid"));
-		add(new SmallFlowerSet("aloe_vera", new AloeVeraBlock(FabricBlockSettings.copyOf(Blocks.POPPY)), true));
+		add(new SmallFlowerSet("aloe_vera", new AloeVeraBlock(FabricBlockSettings.copyOf(Blocks.POPPY)), false));
 	}};
 	
 	public static List<TallFlowerSet> TALL_FLOWER_SETS = new ArrayList<>() {{
