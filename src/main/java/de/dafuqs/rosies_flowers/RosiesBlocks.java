@@ -195,14 +195,14 @@ public class RosiesBlocks {
 		public Block wood;
 		public Block strippedWood;
 		public Block stairs;
-		public Block door;
+		//public Block door;
 		public Block sign;
 		public Block wallSign;
-		public Block hangingSign;
-		public Block wallHangingSign;
+		//public Block hangingSign;
+		//public Block wallHangingSign;
 		public Block pressurePlate;
 		public Block fence;
-		public Block trapdoor;
+		//public Block trapdoor;
 		public Block fenceGate;
 		public Block button;
 		public Block slab;
@@ -222,26 +222,26 @@ public class RosiesBlocks {
 			wood = registerBlockWithBlockItem(name + "_wood", new PillarBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 			strippedWood = registerBlockWithBlockItem("stripped_" + name + "_wood", new PillarBlock(AbstractBlock.Settings.create().mapColor(topLogMapColor).instrument(Instrument.BASS).strength(2.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 			stairs = registerBlockWithBlockItem(name + "_stairs", createStairsBlock(planks));
-
-			Block doorBlock = new DoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).instrument(Instrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY));
-			Item doorItem = new TallBlockItem(doorBlock, new Item.Settings());
-			door = registerBlockWithItem(name + "_door", doorBlock, doorItem);
+			
+			//Block doorBlock = new DoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).instrument(Instrument.BASS).strength(3.0F).nonOpaque().burnable().pistonBehavior(PistonBehavior.DESTROY));
+			//Item doorItem = new TallBlockItem(doorBlock, new Item.Settings());
+			//door = registerBlockWithItem(name + "_door", doorBlock, doorItem);
 
 			Block signBlock = new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable());
 			Block wallSignBlock = new WallSignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).dropsLike(signBlock).burnable());
 			Item signItem = new SignItem((new Item.Settings()).maxCount(16), signBlock, wallSignBlock);
 			sign = registerBlockWithItem(name + "_sign", signBlock, signItem);
 			wallSign = registerBlock(name + "_wall_sign", wallSignBlock);
-
-			Block hangingSignBlock = new HangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable());
-			Block hangingSignWallBlock = new WallHangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable().dropsLike(hangingSignBlock));
-			Item hangingSignItem = new HangingSignItem(hangingSignBlock, hangingSignWallBlock, new Item.Settings().maxCount(16));
-			hangingSign = registerBlockWithItem(name + "_hanging_sign", hangingSignBlock, hangingSignItem);
-			wallHangingSign = registerBlock(name + "_wall_hanging_sign", hangingSignWallBlock);
+			
+			//Block hangingSignBlock = new HangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable());
+			//Block hangingSignWallBlock = new WallHangingSignBlock(woodType, AbstractBlock.Settings.create().mapColor(log.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable().dropsLike(hangingSignBlock));
+			//Item hangingSignItem = new HangingSignItem(hangingSignBlock, hangingSignWallBlock, new Item.Settings().maxCount(16));
+			//hangingSign = registerBlockWithItem(name + "_hanging_sign", hangingSignBlock, hangingSignItem);
+			//wallHangingSign = registerBlock(name + "_wall_hanging_sign", hangingSignWallBlock);
 
 			pressurePlate = registerBlockWithBlockItem(name + "_pressure_plate", new PressurePlateBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(0.5F).burnable().pistonBehavior(PistonBehavior.DESTROY)));
 			fence = registerBlockWithBlockItem(name + "_fence", new FenceBlock(AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
-			trapdoor = registerBlockWithBlockItem(name + "_trapdoor", new TrapdoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
+			//trapdoor = registerBlockWithBlockItem(name + "_trapdoor", new TrapdoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
 			fenceGate = registerBlockWithBlockItem(name + "_fence_gate", new FenceGateBlock(woodType, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).burnable()));
 			button = registerBlockWithBlockItem(name + "_button", Blocks.createWoodenButtonBlock(BLOCK_SET_TYPE));
 			slab = registerBlockWithBlockItem(name + "_slab", new SlabBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
@@ -266,7 +266,7 @@ public class RosiesBlocks {
 		}
 
 		public void registerClient() {
-			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), door, trapdoor);
+			//BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), door, trapdoor);
 		}
 
 		public void addEntries(ItemGroup.Entries entries) {
@@ -276,12 +276,12 @@ public class RosiesBlocks {
 			entries.add(wood);
 			entries.add(strippedWood);
 			entries.add(stairs);
-			entries.add(door);
+			//entries.add(door);
 			entries.add(sign);
-			entries.add(hangingSign);
+			//entries.add(hangingSign);
 			entries.add(pressurePlate);
 			entries.add(fence);
-			entries.add(trapdoor);
+			//entries.add(trapdoor);
 			entries.add(fenceGate);
 			entries.add(button);
 			entries.add(slab);
