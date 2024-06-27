@@ -1,3 +1,6 @@
 {
-  "parent": "rosies_flowers:block/aloe_vera"
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "rosies_flowers:item/aloe_vera"
+  }
 }
