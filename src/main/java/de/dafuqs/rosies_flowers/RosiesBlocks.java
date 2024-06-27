@@ -227,8 +227,8 @@ public class RosiesBlocks {
 			//Item doorItem = new TallBlockItem(doorBlock, new Item.Settings());
 			//door = registerBlockWithItem(name + "_door", doorBlock, doorItem);
 			
-			Block signBlock = new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).burnable());
-			Block wallSignBlock = new WallSignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(Instrument.BASS).noCollision().strength(1.0F).dropsLike(signBlock).burnable());
+			Block signBlock = new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(1.0F).burnable());
+			Block wallSignBlock = new WallSignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(1.0F).dropsLike(signBlock).burnable());
 			Item signItem = new SignItem((new Item.Settings()).maxCount(16), signBlock, wallSignBlock);
 			sign = registerBlockWithItem(name + "_sign", signBlock, signItem);
 			wallSign = registerBlock(name + "_wall_sign", wallSignBlock);
@@ -239,10 +239,10 @@ public class RosiesBlocks {
 			//hangingSign = registerBlockWithItem(name + "_hanging_sign", hangingSignBlock, hangingSignItem);
 			//wallHangingSign = registerBlock(name + "_wall_hanging_sign", hangingSignWallBlock);
 			
-			pressurePlate = registerBlockWithBlockItem(name + "_pressure_plate", new PressurePlateBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).noCollision().strength(0.5F).burnable().pistonBehavior(PistonBehavior.DESTROY)));
-			fence = registerBlockWithBlockItem(name + "_fence", new FenceBlock(AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
+			pressurePlate = registerBlockWithBlockItem(name + "_pressure_plate", new PressurePlateBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(0.5F).burnable().pistonBehavior(PistonBehavior.DESTROY)));
+			fence = registerBlockWithBlockItem(name + "_fence", new FenceBlock(AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 			//trapdoor = registerBlockWithBlockItem(name + "_trapdoor", new TrapdoorBlock(BLOCK_SET_TYPE, AbstractBlock.Settings.create().mapColor(mapColor).instrument(Instrument.BASS).strength(3.0F).nonOpaque().allowsSpawning(Blocks::never).burnable()));
-			fenceGate = registerBlockWithBlockItem(name + "_fence_gate", new FenceGateBlock(woodType, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(Instrument.BASS).strength(2.0F, 3.0F).burnable()));
+			fenceGate = registerBlockWithBlockItem(name + "_fence_gate", new FenceGateBlock(woodType, AbstractBlock.Settings.create().mapColor(planks.getDefaultMapColor()).solid().instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).burnable()));
 			button = registerBlockWithBlockItem(name + "_button", Blocks.createWoodenButtonBlock(BLOCK_SET_TYPE));
 			slab = registerBlockWithBlockItem(name + "_slab", new SlabBlock(AbstractBlock.Settings.create().mapColor(mapColor).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sounds(BlockSoundGroup.WOOD).burnable()));
 
