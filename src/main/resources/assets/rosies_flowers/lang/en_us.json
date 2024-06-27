@@ -1,5 +1,5 @@
 {
-  "itemGroup.rosies_flowers.rosies_flowers": "Sierra\u0027s Flowers",
+  "itemGroup.rosies_flowers.rosies_flowers": "Rosie\u0027s Flowers",
 
   "block.rosies_flowers.dogwood_sapling": "White Dogwood Sapling",
   "block.rosies_flowers.dogwood_carpet": "White Dogwood Carpet",
@@ -10,6 +10,7 @@
   "block.rosies_flowers.purple_wisteria_sapling": "Purple Blossom Sapling",
   "block.rosies_flowers.purple_wisteria_carpet": "Purple Blossom Carpet",
   "block.rosies_flowers.purple_wisteria_leaves": "Purple Blossom Leaves",
+  "block.rosies_flowers.red_dogwood_carpet": "Red Dogwood Carpet",
   "block.rosies_flowers.red_dogwood_leaves": "Red Dogwood Leaves",
   "block.rosies_flowers.red_dogwood_sapling": "Red Dogwood Sapling",
   "block.rosies_flowers.dogwood_button": "Dogwood Button",
