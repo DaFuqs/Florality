@@ -1,5 +1,6 @@
 package de.dafuqs.rosies_flowers;
 
+import com.terraformersmc.terraform.sign.api.block.*;
 import de.dafuqs.rosies_flowers.blocks.*;
 import net.fabricmc.api.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.*;
@@ -34,7 +35,6 @@ public class RosiesBlocks {
 		add(new SmallFlowerSet("sunrise_daisy"));
 		add(new SmallFlowerSet("himalayan_poppy"));
 		add(new SmallFlowerSet("blue_hydrangea"));
-		add(new SmallFlowerSet("fleabane"));
 		add(new SmallFlowerSet("scarlet_flax"));
 		add(new SmallFlowerSet("obama_plant"));
 		add(new SmallFlowerSet("white_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, FabricBlockSettings.copyOf(Blocks.POPPY)), false));
@@ -49,8 +49,6 @@ public class RosiesBlocks {
 	
 	public static List<TallFlowerSet> TALL_FLOWER_SETS = new ArrayList<>() {{
 		add(new TallFlowerSet("chaconia"));
-		add(new TallFlowerSet("orange_zinnia"));
-		add(new TallFlowerSet("pink_zinnia"));
 		
 		add(new TallFlowerSet("blue_sage"));
 		add(new TallFlowerSet("butterfly_weed"));

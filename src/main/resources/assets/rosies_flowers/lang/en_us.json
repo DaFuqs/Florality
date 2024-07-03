@@ -31,7 +31,6 @@
   "block.rosies_flowers.dogwood_wood": "Dogwood Wood",
   "block.rosies_flowers.stripped_dogwood_wood": "Stripped Dogwood Wood",
 
-  "block.rosies_flowers.fleabane": "Fleabane",
   "block.rosies_flowers.sunrise_daisy": "Sunrise Daisy",
   "block.rosies_flowers.blue_hydrangea": "Blue Hydrangea",
   "block.rosies_flowers.aloe_vera": "Aloe Vera",
@@ -48,7 +47,6 @@
   "block.rosies_flowers.pink_allium": "Pink Allium",
   "block.rosies_flowers.pink_orchid": "Pink Orchid",
 
-  "block.rosies_flowers.potted_fleabane": "Potted Fleabane",
   "block.rosies_flowers.potted_sunrise_daisy": "Potted Sunrise Daisy",
   "block.rosies_flowers.potted_blue_hydrangea": "Potted Blue Hydrangea",
   "block.rosies_flowers.potted_aloe_vera": "Potted Aloe Vera",
@@ -62,8 +60,6 @@
   "block.rosies_flowers.potted_pink_orchid": "Potted Pink Orchid",
 
   "block.rosies_flowers.chaconia": "Chaconia",
-  "block.rosies_flowers.orange_zinnia": "Orange Zinnia",
-  "block.rosies_flowers.pink_zinnia": "Pink Zinnia",
   "block.rosies_flowers.blue_sage": "Blue Sage",
   "block.rosies_flowers.butterfly_weed": "Butterfly Weed",
   "block.rosies_flowers.fuchsia": "Fuchsia",

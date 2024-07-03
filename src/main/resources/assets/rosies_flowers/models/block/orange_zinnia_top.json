@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "rosies_flowers:block/orange_zinnia_top",
-    "particle": "rosies_flowers:block/orange_zinnia_top"
-  }
-}
