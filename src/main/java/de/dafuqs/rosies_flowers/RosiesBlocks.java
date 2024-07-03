@@ -225,8 +225,8 @@ public class RosiesBlocks {
 			//Item doorItem = new TallBlockItem(doorBlock, new Item.Settings());
 			//door = registerBlockWithItem(name + "_door", doorBlock, doorItem);
 			
-			Block signBlock = new SignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(1.0F).burnable());
-			Block wallSignBlock = new WallSignBlock(woodType, AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(1.0F).dropsLike(signBlock).burnable());
+			Block signBlock = new TerraformSignBlock(RosiesFlowers.id("entity/signs/dogwood"), AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(1.0F).burnable());
+			Block wallSignBlock = new TerraformWallSignBlock(RosiesFlowers.id("entity/signs/dogwood"), AbstractBlock.Settings.create().mapColor(mapColor).solid().instrument(NoteBlockInstrument.BASS).noCollision().strength(1.0F).dropsLike(signBlock).burnable());
 			Item signItem = new SignItem((new Item.Settings()).maxCount(16), signBlock, wallSignBlock);
 			sign = registerBlockWithItem(name + "_sign", signBlock, signItem);
 			wallSign = registerBlock(name + "_wall_sign", wallSignBlock);
