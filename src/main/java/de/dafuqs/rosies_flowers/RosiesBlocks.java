@@ -48,8 +48,6 @@ public class RosiesBlocks {
 	}};
 	
 	public static List<TallFlowerSet> TALL_FLOWER_SETS = new ArrayList<>() {{
-		add(new TallFlowerSet("chaconia"));
-		
 		add(new TallFlowerSet("blue_sage"));
 		add(new TallFlowerSet("butterfly_weed"));
 		add(new TallFlowerSet("fuchsia"));
