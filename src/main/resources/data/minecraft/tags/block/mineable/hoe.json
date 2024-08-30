@@ -11,6 +11,11 @@
     "rosies_flowers:dogwood_carpet",
 
     "rosies_flowers:red_dogwood_leaves",
-    "rosies_flowers:red_dogwood_carpet"
+    "rosies_flowers:red_dogwood_carpet",
+
+    "rosies_flowers:poinciana_leaves",
+    "rosies_flowers:poinciana_carpet",
+    "rosies_flowers:flowering_poinciana_leaves",
+    "rosies_flowers:flowering_poinciana_carpet"
   ]
 }

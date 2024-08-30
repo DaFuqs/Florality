@@ -8,7 +8,6 @@ import java.util.*;
 public class RosiesItemGroups {
 	
 	public static void register() {
-		
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
 			for (List<? extends RosiesBlocks.BlockSet> set : RosiesBlocks.ALL_SETS) {
 				for (RosiesBlocks.BlockSet entry : set) {
@@ -19,9 +18,6 @@ public class RosiesItemGroups {
 			entries.add(RosiesBlocks.DUNE_GRASS);
 			entries.add(RosiesBlocks.HONEYSUCKLE);
 		});
-		
-		
-		
 	}
 	
 }
