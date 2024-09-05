@@ -127,7 +127,7 @@ public class FloralityBlocks {
 			FlammableBlockRegistry registry = FlammableBlockRegistry.getDefaultInstance();
 			
 			for(String leafPrefix : this.leafPrefixes) {
-				Block leafBlock = registerBlockWithBlockItem( leafPrefix + name, new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
+				Block leafBlock = registerBlockWithBlockItem( leafPrefix + name + "_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
 				this.leaves.add(leafBlock);
 				this.leafCarpets.add(registerBlockWithBlockItem(leafPrefix + name + "_carpet", new LeafCarpetBlock(AbstractBlock.Settings.copy(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque())));
 				registry.add(leafBlock, 30, 60);
