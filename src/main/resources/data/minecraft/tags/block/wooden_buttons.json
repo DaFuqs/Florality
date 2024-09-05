@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:dogwood_button",
-    "flower_finesse:poinciana_button"
+    "florality:dogwood_button",
+    "florality:poinciana_button"
   ]
 }

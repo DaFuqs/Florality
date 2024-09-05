@@ -1,18 +1,18 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:sunrise_daisy",
-    "flower_finesse:himalayan_poppy",
-    "flower_finesse:blue_hydrangea",
-    "flower_finesse:obama_plant",
-    "flower_finesse:aloe_vera",
-    "flower_finesse:scarlet_flax",
-    "flower_finesse:white_periwinkle",
-    "flower_finesse:purple_periwinkle",
-    "flower_finesse:felicia_daisy",
-    "flower_finesse:flame_orchid",
-    "flower_finesse:gerbera_daisy",
-    "flower_finesse:pink_allium",
-    "flower_finesse:pink_orchid"
+    "florality:sunrise_daisy",
+    "florality:himalayan_poppy",
+    "florality:blue_hydrangea",
+    "florality:obama_plant",
+    "florality:aloe_vera",
+    "florality:scarlet_flax",
+    "florality:white_periwinkle",
+    "florality:purple_periwinkle",
+    "florality:felicia_daisy",
+    "florality:flame_orchid",
+    "florality:gerbera_daisy",
+    "florality:pink_allium",
+    "florality:pink_orchid"
   ]
 }

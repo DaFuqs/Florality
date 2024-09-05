@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "florality:block/red_dogwood_sapling"
+  }
+}

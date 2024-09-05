@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:dogwood_wall_sign",
-    "flower_finesse:poinciana_wall_sign"
+    "florality:dogwood_wall_sign",
+    "florality:poinciana_wall_sign"
   ]
 }

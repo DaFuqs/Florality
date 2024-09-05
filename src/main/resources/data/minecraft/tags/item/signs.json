@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:dogwood_sign",
-    "flower_finesse:poinciana_sign"
+    "florality:dogwood_sign",
+    "florality:poinciana_sign"
   ]
 }

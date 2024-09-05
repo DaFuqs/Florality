@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "florality:block/flame_orchid",
+    "particle": "florality:block/flame_orchid"
+  }
+}

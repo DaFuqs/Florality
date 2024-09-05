@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:dogwood_slab",
-    "flower_finesse:poinciana_slab"
+    "florality:dogwood_slab",
+    "florality:poinciana_slab"
   ]
 }

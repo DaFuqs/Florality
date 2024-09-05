@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "florality:poinciana_logs"
+    }
+  ],
+  "result": {
+    "id": "florality:poinciana_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "florality:block/blue_hydrangea",
+    "particle": "florality:block/blue_hydrangea"
+  }
+}

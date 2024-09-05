@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:dogwood_log",
-    "flower_finesse:poinciana_log"
+    "florality:dogwood_log",
+    "florality:poinciana_log"
   ]
 }

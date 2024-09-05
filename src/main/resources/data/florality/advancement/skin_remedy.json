@@ -1,0 +1,30 @@
+{
+  "display": {
+    "icon": {
+      "id": "florality:aloe_vera"
+    },
+    "title": {
+      "translate": "advancements.skin_remedy.title"
+    },
+    "description": {
+      "translate": "advancements.skin_remedy.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "skin_remedy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "florality:aloe_vera"
+          }
+        ]
+      }
+    }
+  },
+  "parent": "minecraft:husbandry/root"
+}

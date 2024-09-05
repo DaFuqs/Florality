@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "florality:block/obama_plant",
+    "particle": "florality:block/obama_plant"
+  }
+}

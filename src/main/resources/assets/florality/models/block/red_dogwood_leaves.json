@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "florality:block/red_dogwood_leaves"
+  }
+}

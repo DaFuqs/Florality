@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:dogwood_pressure_plate",
-    "flower_finesse:poinciana_pressure_plate"
+    "florality:dogwood_pressure_plate",
+    "florality:poinciana_pressure_plate"
   ]
 }

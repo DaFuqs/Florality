@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "florality:larkspur"
+    }
+  ],
+  "result": {
+    "id": "minecraft:cyan_dye",
+    "count": 2
+  }
+}

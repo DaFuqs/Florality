@@ -1,6 +1,6 @@
 ![Mod Logo](/images/logo.png)
 
-Flower Finesse is a Minecraft mod that adds more flowers to your world to give immersive variety as well as more decoration options for builds.
+Florality is a Minecraft mod that adds more flowers to your world to give immersive variety as well as more decoration options for builds.
 
 ## Credit
 - **Rosie** - Most of the textures

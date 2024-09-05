@@ -1,6 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "flower_finesse:block/mountain_laurel_top"
-  }
-}

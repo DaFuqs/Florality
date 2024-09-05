@@ -1,26 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "flower_finesse",
+  "id": "florality",
   "version": "${version}",
-
-  "name": "Rosie's Flowers",
-  "description": "Simple Minecraft mod that brings new floral features to the Overworld!",
+  "name": "Florality",
+  "description": "Brings new floral features to the Overworld!",
   "authors": [
     "Rosie",
     "Dafuqs"
   ],
   "contact": {
-    "repo": "https://github.com/DaFuqs/flower_finesse"
+    "repo": "https://github.com/DaFuqs/florality"
   },
   "license": "Academic Free License v3.0",
-  "icon": "assets/flower_finesse/icon.png",
+  "icon": "assets/florality/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "de.dafuqs.flower_finesse.client.FlowerFinesseClient"
+      "de.dafuqs.florality.client.FloralityClient"
     ],
     "main": [
-      "de.dafuqs.flower_finesse.FlowerFinesse"
+      "de.dafuqs.florality.Florality"
     ]
   },
   "mixins": [],

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "florality:dogwood_logs"
+    }
+  ],
+  "result": {
+    "id": "florality:dogwood_planks",
+    "count": 4
+  }
+}

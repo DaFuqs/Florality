@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "flower_finesse:block/dogwood_planks",
-    "side": "flower_finesse:block/dogwood_planks",
-    "top": "flower_finesse:block/dogwood_planks"
-  }
-}

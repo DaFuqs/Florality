@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "flower_finesse:block/dogwood_log",
-    "side": "flower_finesse:block/dogwood_log"
-  }
-}

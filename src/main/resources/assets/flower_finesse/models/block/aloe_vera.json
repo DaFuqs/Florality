@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "flower_finesse:block/aloe_vera",
-    "particle": "flower_finesse:block/aloe_vera"
-  }
-}

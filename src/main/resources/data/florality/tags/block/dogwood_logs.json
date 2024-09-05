@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "florality:dogwood_log",
+    "florality:dogwood_wood",
+    "florality:stripped_dogwood_log",
+    "florality:stripped_dogwood_wood"
+  ]
+}

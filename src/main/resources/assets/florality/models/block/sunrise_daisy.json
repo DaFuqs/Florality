@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "florality:block/sunrise_daisy",
+    "particle": "florality:block/sunrise_daisy"
+  }
+}

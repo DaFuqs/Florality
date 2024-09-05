@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "florality:block/dogwood_slab"
+    },
+    "type=double": {
+      "model": "florality:block/dogwood_planks"
+    },
+    "type=top": {
+      "model": "florality:block/dogwood_slab_top"
+    }
+  }
+}

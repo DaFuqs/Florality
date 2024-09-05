@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "florality:block/butterfly_weed_top"
+  }
+}

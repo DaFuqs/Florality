@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "flower_finesse:blue_sage",
-    "flower_finesse:butterfly_weed",
-    "flower_finesse:fuchsia",
-    "flower_finesse:larkspur",
-    "flower_finesse:mountain_laurel",
-    "flower_finesse:purple_hibiscus"
+    "florality:blue_sage",
+    "florality:butterfly_weed",
+    "florality:fuchsia",
+    "florality:larkspur",
+    "florality:mountain_laurel",
+    "florality:purple_hibiscus"
   ]
 }

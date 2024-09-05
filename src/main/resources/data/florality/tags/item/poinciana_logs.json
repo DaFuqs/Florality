@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "florality:poinciana_log",
+    "florality:poinciana_wood",
+    "florality:stripped_poinciana_log",
+    "florality:stripped_poinciana_wood"
+  ]
+}

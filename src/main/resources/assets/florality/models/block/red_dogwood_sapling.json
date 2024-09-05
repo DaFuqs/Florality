@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "florality:block/red_dogwood_sapling"
+  }
+}

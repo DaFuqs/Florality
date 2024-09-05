@@ -1,0 +1,6 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "florality:block/purple_hibiscus_bottom"
+  }
+}
