@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flower_finesse:block/blue_sage_bottom"
+    },
+    "half=upper": {
+      "model": "flower_finesse:block/blue_sage_top"
+    }
+  }
+}

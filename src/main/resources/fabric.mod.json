@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "rosies_flowers",
+  "id": "flower_finesse",
   "version": "${version}",
 
   "name": "Rosie's Flowers",
@@ -10,22 +10,20 @@
     "Dafuqs"
   ],
   "contact": {
-    "repo": "https://github.com/DaFuqs/rosies_flowers"
+    "repo": "https://github.com/DaFuqs/flower_finesse"
   },
   "license": "Academic Free License v3.0",
-  "icon": "assets/rosies_flowers/icon.png",
+  "icon": "assets/flower_finesse/icon.png",
   "environment": "*",
   "entrypoints": {
     "client": [
-      "de.dafuqs.rosies_flowers.client.RosiesFlowersClient"
+      "de.dafuqs.flower_finesse.client.FlowerFinesseClient"
     ],
     "main": [
-      "de.dafuqs.rosies_flowers.RosiesFlowers"
+      "de.dafuqs.flower_finesse.FlowerFinesse"
     ]
   },
-  "mixins": [
-    "rosiesflowers.mixins.json"
-  ],
+  "mixins": [],
   "depends": {
     "minecraft": ">=1.21",
     "fabricloader": "*",

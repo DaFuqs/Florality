@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/carpet",
+  "textures": {
+    "wool": "flower_finesse:block/purple_wisteria_leaves"
+  }
+}

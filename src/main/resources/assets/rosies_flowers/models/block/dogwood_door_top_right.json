@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "textures": {
-    "bottom": "rosies_flowers:block/dogwood_door_bottom",
-    "top": "rosies_flowers:block/dogwood_door_top"
-  }
-}

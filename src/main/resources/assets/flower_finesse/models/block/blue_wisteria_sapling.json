@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "flower_finesse:block/blue_wisteria_sapling"
+  }
+}

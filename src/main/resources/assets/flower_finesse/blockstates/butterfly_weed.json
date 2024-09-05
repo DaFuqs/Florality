@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flower_finesse:block/butterfly_weed_bottom"
+    },
+    "half=upper": {
+      "model": "flower_finesse:block/butterfly_weed_top"
+    }
+  }
+}

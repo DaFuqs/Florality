@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    [
+      {
+        "item": "flower_finesse:pink_hydrangea"
+      },
+      {
+        "item": "flower_finesse:purple_hydrangea"
+      },
+      {
+        "item": "flower_finesse:red_hydrangea"
+      },
+      {
+        "item": "flower_finesse:white_hydrangea"
+      }
+    ],
+    {
+      "item": "minecraft:spruce_leaves"
+    }
+  ],
+  "result": {
+    "id": "flower_finesse:blue_hydrangea",
+    "count": 1
+  }
+}

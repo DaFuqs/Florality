@@ -1,20 +1,20 @@
 {
   "replace": false,
   "values": [
-    "rosies_flowers:potted_dogwood_sapling",
-    "rosies_flowers:potted_red_dogwood_sapling",
-    "rosies_flowers:potted_blue_wisteria_sapling",
-    "rosies_flowers:potted_purple_wisteria_sapling",
+    "flower_finesse:potted_dogwood_sapling",
+    "flower_finesse:potted_red_dogwood_sapling",
+    "flower_finesse:potted_blue_wisteria_sapling",
+    "flower_finesse:potted_purple_wisteria_sapling",
 
-    "rosies_flowers:potted_sunrise_daisy",
-    "rosies_flowers:potted_himalayan_poppy",
-    "rosies_flowers:potted_blue_hydrangea",
-    "rosies_flowers:potted_scarlet_flax",
-    "rosies_flowers:potted_obama_plant",
-    "rosies_flowers:potted_felicia_daisy",
-    "rosies_flowers:potted_flame_orchid",
-    "rosies_flowers:potted_gerbera_daisy",
-    "rosies_flowers:potted_pink_allium",
-    "rosies_flowers:potted_pink_orchid"
+    "flower_finesse:potted_sunrise_daisy",
+    "flower_finesse:potted_himalayan_poppy",
+    "flower_finesse:potted_blue_hydrangea",
+    "flower_finesse:potted_scarlet_flax",
+    "flower_finesse:potted_obama_plant",
+    "flower_finesse:potted_felicia_daisy",
+    "flower_finesse:potted_flame_orchid",
+    "flower_finesse:potted_gerbera_daisy",
+    "flower_finesse:potted_pink_allium",
+    "flower_finesse:potted_pink_orchid"
   ]
 }

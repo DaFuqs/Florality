@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "flower_finesse:block/gerbera_daisy",
+    "particle": "flower_finesse:block/gerbera_daisy"
+  }
+}

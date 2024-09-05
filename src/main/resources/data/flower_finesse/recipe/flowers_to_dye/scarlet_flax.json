@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "flower_finesse:scarlet_flax"
+    }
+  ],
+  "result": {
+    "id": "minecraft:magenta_dye",
+    "count": 1
+  }
+}

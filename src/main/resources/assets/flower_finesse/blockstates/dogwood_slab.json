@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "flower_finesse:block/dogwood_slab"
+    },
+    "type=double": {
+      "model": "flower_finesse:block/dogwood_planks"
+    },
+    "type=top": {
+      "model": "flower_finesse:block/dogwood_slab_top"
+    }
+  }
+}

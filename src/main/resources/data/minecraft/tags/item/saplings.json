@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "rosies_flowers:blue_wisteria_sapling",
-    "rosies_flowers:purple_wisteria_sapling",
+    "flower_finesse:blue_wisteria_sapling",
+    "flower_finesse:purple_wisteria_sapling",
 
-    "rosies_flowers:dogwood_sapling",
-    "rosies_flowers:red_dogwood_sapling",
+    "flower_finesse:dogwood_sapling",
+    "flower_finesse:red_dogwood_sapling",
 
-    "rosies_flowers:yellow_poinciana_sapling"
+    "flower_finesse:yellow_poinciana_sapling"
   ]
 }

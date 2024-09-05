@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "flower_finesse:block/purple_wisteria_leaves"
+  }
+}

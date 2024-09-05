@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "rosies_flowers:dogwood_fence_gate"
-    "rosies_flowers:poinciana_fence_gate"
+    "flower_finesse:dogwood_fence_gate"
+    "flower_finesse:poinciana_fence_gate"
   ]
 }

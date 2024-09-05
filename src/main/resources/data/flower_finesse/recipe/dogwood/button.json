@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "flower_finesse:dogwood_planks"
+    }
+  ],
+  "result": {
+    "id": "flower_finesse:dogwood_button"
+  }
+}

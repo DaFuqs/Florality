@@ -1,11 +1,11 @@
 {
   "replace": false,
   "values": [
-    "rosies_flowers:blue_sage",
-    "rosies_flowers:butterfly_weed",
-    "rosies_flowers:fuchsia",
-    "rosies_flowers:larkspur",
-    "rosies_flowers:mountain_laurel",
-    "rosies_flowers:purple_hibiscus"
+    "flower_finesse:blue_sage",
+    "flower_finesse:butterfly_weed",
+    "flower_finesse:fuchsia",
+    "flower_finesse:larkspur",
+    "flower_finesse:mountain_laurel",
+    "flower_finesse:purple_hibiscus"
   ]
 }

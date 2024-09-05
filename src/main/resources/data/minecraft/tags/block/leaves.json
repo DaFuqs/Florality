@@ -1,15 +1,17 @@
 {
   "replace": false,
   "values": [
-    "rosies_flowers:blue_wisteria_leaves",
-    "rosies_flowers:purple_wisteria_leaves",
+    "flower_finesse:blue_wisteria_leaves",
+    "flower_finesse:purple_wisteria_leaves",
 
-    "rosies_flowers:dogwood_leaves",
-    "rosies_flowers:red_dogwood_leaves",
+    "flower_finesse:dogwood_leaves",
+    "flower_finesse:red_dogwood_leaves",
 
-    "rosies_flowers:poinciana_leaves",
-    "rosies_flowers:poinciana_carpet",
-    "rosies_flowers:flowering_poinciana_leaves",
-    "rosies_flowers:flowering_poinciana_carpet"
+    "flower_finesse:poinciana_leaves",
+    "flower_finesse:poinciana_carpet",
+    "flower_finesse:partly_flowering_poinciana_leaves",
+    "flower_finesse:partly_flowering_poinciana_carpet",
+    "flower_finesse:flowering_poinciana_leaves",
+    "flower_finesse:flowering_poinciana_carpet"
   ]
 }

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "#rosies_flowers:dogwood_logs",
-    "#rosies_flowers:poinciana_logs"
+    "#flower_finesse:dogwood_logs",
+    "#flower_finesse:poinciana_logs"
   ]
 }

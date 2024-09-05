@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "flower_finesse:aloe_vera"
+    }
+  ],
+  "result": {
+    "id": "minecraft:gray_dye",
+    "count": 1
+  }
+}

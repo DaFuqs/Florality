@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "flower_finesse:block/dogwood_planks"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "rosies_flowers:dogwood_planks",
-    "rosies_flowers:poinciana_planks"
+    "flower_finesse:dogwood_planks",
+    "flower_finesse:poinciana_planks"
   ]
 }
