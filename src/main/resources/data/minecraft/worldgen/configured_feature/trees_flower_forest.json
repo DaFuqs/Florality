@@ -9,10 +9,6 @@
       {
         "chance": 0.25,
         "feature": "florality:dogwood_tree"
-      },
-      {
-        "chance": 0.4,
-        "feature": "florality:red_dogwood_tree"
       }
     ],
     "default": "minecraft:cherry_bees_005"

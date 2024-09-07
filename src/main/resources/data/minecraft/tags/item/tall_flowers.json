@@ -1,11 +1,7 @@
 {
   "replace": false,
   "values": [
-    "florality:blue_sage",
     "florality:butterfly_weed",
-    "florality:fuchsia",
-    "florality:larkspur",
-    "florality:mountain_laurel",
-    "florality:purple_hibiscus"
+    "florality:fuchsia"
   ]
 }

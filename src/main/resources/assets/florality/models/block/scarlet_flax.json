@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "florality:block/scarlet_flax",
-    "particle": "florality:block/scarlet_flax"
-  }
-}

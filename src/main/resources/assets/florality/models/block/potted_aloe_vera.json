@@ -1,7 +1,6 @@
 {
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
-    "plant": "florality:block/himalayan_poppy"
+    "plant": "florality:block/aloe_vera"
   }
 }
- 

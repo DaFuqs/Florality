@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "florality:block/felicia_daisy",
-    "particle": "florality:block/felicia_daisy"
-  }
-}

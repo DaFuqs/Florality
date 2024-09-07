@@ -1,7 +1,0 @@
-{
-  "parent": "block/cross",
-  "textures": {
-    "cross": "florality:block/himalayan_poppy",
-    "particle": "florality:block/himalayan_poppy"
-  }
-}

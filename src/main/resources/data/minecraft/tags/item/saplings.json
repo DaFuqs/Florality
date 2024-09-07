@@ -1,11 +1,7 @@
 {
   "replace": false,
   "values": [
-    "florality:blue_wisteria_sapling",
-    "florality:purple_wisteria_sapling",
-
     "florality:dogwood_sapling",
-    "florality:red_dogwood_sapling",
 
     "florality:yellow_poinciana_sapling"
   ]

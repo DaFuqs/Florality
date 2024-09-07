@@ -1,11 +1,7 @@
 {
   "replace": false,
   "values": [
-    "florality:blue_wisteria_leaves",
-    "florality:purple_wisteria_leaves",
-
     "florality:dogwood_leaves",
-    "florality:red_dogwood_leaves",
 
     "florality:poinciana_leaves",
     "florality:poinciana_carpet",

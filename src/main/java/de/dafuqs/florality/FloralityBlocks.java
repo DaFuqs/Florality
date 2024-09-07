@@ -21,51 +21,49 @@ public class FloralityBlocks {
 
 	public static List<SaplingSet> SAPLING_SETS = new ArrayList<>() {{
 		add(new SaplingSet("dogwood", MapColor.WHITE_GRAY, List.of("")));
-		add(new SaplingSet("red_dogwood", MapColor.DULL_PINK, List.of("")));
-		add(new SaplingSet("blue_wisteria", MapColor.WATER_BLUE, List.of("")));
-		add(new SaplingSet("purple_wisteria", MapColor.TERRACOTTA_PURPLE, List.of("")));
-		add(new SaplingSet("yellow_poinciana", MapColor.YELLOW, List.of("", "partly_flowering_", "flowering_")));
+		//add(new SaplingSet("red_dogwood", MapColor.DULL_PINK, List.of("")));
+		//add(new SaplingSet("blue_wisteria", MapColor.WATER_BLUE, List.of("")));
+		//add(new SaplingSet("purple_wisteria", MapColor.TERRACOTTA_PURPLE, List.of("")));
+		//add(new SaplingSet("yellow_poinciana", MapColor.YELLOW, List.of("", "partly_flowering_", "flowering_")));
 	}};
 	
 	public static List<WoodSet> WOOD_SETS = new ArrayList<>() {{
-		add(new WoodSet("dogwood", MapColor.OAK_TAN, MapColor.GRAY));
-		add(new WoodSet("poinciana", MapColor.ORANGE, MapColor.ORANGE));
+		//add(new WoodSet("dogwood", MapColor.OAK_TAN, MapColor.GRAY));
+		//add(new WoodSet("poinciana", MapColor.ORANGE, MapColor.ORANGE));
 	}};
 	
 	public static List<SmallFlowerSet> SMALL_FLOWER_SETS = new ArrayList<>() {{
-		add(new SmallFlowerSet("sunrise_daisy"));
-		add(new SmallFlowerSet("himalayan_poppy"));
-		add(new SmallFlowerSet("blue_hydrangea"));
-		add(new SmallFlowerSet("scarlet_flax"));
-		add(new SmallFlowerSet("obama_plant"));
-		add(new SmallFlowerSet("white_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), false));
-		add(new SmallFlowerSet("purple_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), false));
-		add(new SmallFlowerSet("felicia_daisy"));
-		add(new SmallFlowerSet("flame_orchid"));
-		add(new SmallFlowerSet("gerbera_daisy"));
-		add(new SmallFlowerSet("pink_allium"));
-		add(new SmallFlowerSet("pink_orchid"));
+		//add(new SmallFlowerSet("agleonema"));
+		//add(new SmallFlowerSet("black_eyed_susans"));
+		//add(new SmallFlowerSet("felicia_daisy"));
+		//add(new SmallFlowerSet("gerbera_daisy"));
+		//add(new SmallFlowerSet("harmonic_sprouts"));
+		//add(new SmallFlowerSet("himalayan_poppy"));
+		//add(new SmallFlowerSet("musical_mushroom"));
+		//add(new SmallFlowerSet("obama_plant"));
+		//add(new SmallFlowerSet("orange_dahlia"));
+		//add(new SmallFlowerSet("orange_globeflower"));
+		//add(new SmallFlowerSet("orange_lily"));
+		//add(new SmallFlowerSet("pink_allium"));
+		//add(new SmallFlowerSet("purple_lily"));
+		//add(new SmallFlowerSet("purple_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), false));
+		//add(new SmallFlowerSet("scarlet_flax"));
+		//add(new SmallFlowerSet("white_allium"));
+		//add(new SmallFlowerSet("white_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), false));
 		add(new SmallFlowerSet("aloe_vera", new AloeVeraBlock(AbstractBlock.Settings.copy(Blocks.POPPY)), true));
-
-		add(new SmallFlowerSet("agleonema"));
 		add(new SmallFlowerSet("anthurium"));
-		add(new SmallFlowerSet("black_eyed_susans"));
+		add(new SmallFlowerSet("blue_hydrangea"));
 		add(new SmallFlowerSet("calla_lily"));
 		add(new SmallFlowerSet("catnip"));
-		add(new SmallFlowerSet("harmonic_sprouts"));
+		add(new SmallFlowerSet("flame_orchid"));
 		add(new SmallFlowerSet("heliborus"));
-		add(new SmallFlowerSet("musical_mushroom"));
-		add(new SmallFlowerSet("orange_dahlia"));
-		add(new SmallFlowerSet("agleonema"));
-		add(new SmallFlowerSet("orange_globeflower"));
-		add(new SmallFlowerSet("orange_lily"));
-		add(new SmallFlowerSet("pink_hydrangea"));
+		add(new SmallFlowerSet("pink_hydrangea", false));
+		add(new SmallFlowerSet("pink_orchid"));
 		add(new SmallFlowerSet("pink_petunia"));
-		add(new SmallFlowerSet("purple_hydrangea"));
-		add(new SmallFlowerSet("purple_lily"));
-		add(new SmallFlowerSet("red_hydrangea"));
+		add(new SmallFlowerSet("purple_hydrangea", false));
+		add(new SmallFlowerSet("red_hydrangea", false));
 		add(new SmallFlowerSet("red_petunia"));
-		add(new SmallFlowerSet("white_allium"));
+		add(new SmallFlowerSet("sunrise_daisy"));
 		add(new SmallFlowerSet("white_hydrangea"));
 		add(new SmallFlowerSet("white_orchid"));
 		add(new SmallFlowerSet("white_petunia"));
@@ -74,18 +72,15 @@ public class FloralityBlocks {
 	}};
 	
 	public static List<TallFlowerSet> TALL_FLOWER_SETS = new ArrayList<>() {{
-		add(new TallFlowerSet("blue_sage"));
-		add(new TallFlowerSet("butterfly_weed"));
+		//add(new TallFlowerSet("blue_sage"));
+		//add(new TallFlowerSet("giant_hibiscus"));
+		//add(new TallFlowerSet("larkspur"));
+		//add(new TallFlowerSet("mountain_laurel"));
+		//add(new TallFlowerSet("purple_hibiscus"));
 		add(new TallFlowerSet("fuchsia"));
-		add(new TallFlowerSet("larkspur"));
-		add(new TallFlowerSet("mountain_laurel"));
-		add(new TallFlowerSet("purple_hibiscus"));
-
-		add(new TallFlowerSet("giant_hibiscus"));
 		add(new TallFlowerSet("hollyhock"));
 		add(new TallFlowerSet("magenta_sweetrocket"));
 		add(new TallFlowerSet("pink_larkspur"));
-		add(new TallFlowerSet("giant_hibiscus"));
 		add(new TallFlowerSet("pink_sweetrocket"));
 		add(new TallFlowerSet("purple_sweetrocket"));
 		add(new TallFlowerSet("white_larkspur"));
@@ -115,7 +110,7 @@ public class FloralityBlocks {
 		public Block sapling;
 		public Block pottedSapling;
 		public List<Block> leaves = new ArrayList<>();
-		public List<Block> leafCarpets = new ArrayList<>();
+		//public List<Block> leafCarpets = new ArrayList<>();
 
 		public SaplingSet(String name, MapColor mapColor, List<String> leafPrefixes) {
 			this.name = name;
@@ -129,7 +124,7 @@ public class FloralityBlocks {
 			for(String leafPrefix : this.leafPrefixes) {
 				Block leafBlock = registerBlockWithBlockItem( leafPrefix + name + "_leaves", new LeavesBlock(AbstractBlock.Settings.copy(Blocks.OAK_LEAVES).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor)));
 				this.leaves.add(leafBlock);
-				this.leafCarpets.add(registerBlockWithBlockItem(leafPrefix + name + "_carpet", new LeafCarpetBlock(AbstractBlock.Settings.copy(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque())));
+				//this.leafCarpets.add(registerBlockWithBlockItem(leafPrefix + name + "_carpet", new LeafCarpetBlock(AbstractBlock.Settings.copy(Blocks.WHITE_CARPET).sounds(BlockSoundGroup.AZALEA_LEAVES).mapColor(mapColor).nonOpaque())));
 				registry.add(leafBlock, 30, 60);
 			}
 			
@@ -140,7 +135,7 @@ public class FloralityBlocks {
 		
 		public void registerClient() {
 			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), this.sapling, this.pottedSapling);
-			BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), this.leafCarpets.toArray(new Block[0]));
+			//BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), this.leafCarpets.toArray(new Block[0]));
 		}
 
 		public void addEntries(ItemGroup.Entries entries) {
@@ -148,9 +143,9 @@ public class FloralityBlocks {
 			for(Block block : this.leaves) {
 				entries.add(block);
 			}
-			for(Block block : this.leafCarpets) {
+			/*for(Block block : this.leafCarpets) {
 				entries.add(block);
-			}
+			}*/
 		}
 		
 	}
@@ -166,7 +161,11 @@ public class FloralityBlocks {
 		public Block pottedBlock;
 		
 		public SmallFlowerSet(String name) {
-			this(name, new FlowerBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), true);
+			this(name, true);
+		}
+		
+		public SmallFlowerSet(String name, boolean canBePotted) {
+			this(name, new FlowerBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), canBePotted);
 		}
 		
 		public SmallFlowerSet(String name, Block block, boolean canBePotted) {
@@ -329,7 +328,7 @@ public class FloralityBlocks {
 		}
 	}
 	
-	public static final Block DUNE_GRASS = new DuneGrassBlock(AbstractBlock.Settings.copy(Blocks.SHORT_GRASS));
+	//public static final Block DUNE_GRASS = new DuneGrassBlock(AbstractBlock.Settings.copy(Blocks.SHORT_GRASS));
 	public static final HoneysuckleBlock HONEYSUCKLE = new HoneysuckleBlock(AbstractBlock.Settings.create().mapColor(MapColor.PALE_YELLOW).replaceable().noCollision().strength(0.2F).sounds(BlockSoundGroup.GLOW_LICHEN).burnable().pistonBehavior(PistonBehavior.DESTROY));
 	
 	public static void register() {
@@ -339,7 +338,6 @@ public class FloralityBlocks {
 			}
 		}
 		
-		registerBlockWithBlockItem("dune_grass", DUNE_GRASS);
 		registerBlockWithBlockItem("honeysuckle", HONEYSUCKLE);
 	}
 	
@@ -367,7 +365,7 @@ public class FloralityBlocks {
 			}
 		}
 		
-		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), DUNE_GRASS, HONEYSUCKLE);
+		BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), HONEYSUCKLE);
 	}
 	
 }

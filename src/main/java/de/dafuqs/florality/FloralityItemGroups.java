@@ -15,7 +15,6 @@ public class FloralityItemGroups {
 				}
 			}
 			
-			entries.add(FloralityBlocks.DUNE_GRASS);
 			entries.add(FloralityBlocks.HONEYSUCKLE);
 		});
 	}

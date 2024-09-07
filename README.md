@@ -4,5 +4,5 @@ Florality is a Minecraft mod that adds more flowers to your world to give immers
 
 ## Credit
 - **Rosie** - Most of the textures
-- **RallenX3** - Textures for Mountain Laurel and Butterfly Weed (albeit modified slightly), originally from "More Flower Bushes" mod
+- **RallenX3** - Texture for and Butterfly Weed (albeit modified slightly), originally from "More Flower Bushes" mod
 - **DaFuqs** - Code/Implementation

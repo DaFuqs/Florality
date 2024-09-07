@@ -2,19 +2,10 @@
   "replace": false,
   "values": [
     "florality:potted_dogwood_sapling",
-    "florality:potted_red_dogwood_sapling",
-    "florality:potted_blue_wisteria_sapling",
-    "florality:potted_purple_wisteria_sapling",
 
     "florality:potted_sunrise_daisy",
-    "florality:potted_himalayan_poppy",
     "florality:potted_blue_hydrangea",
-    "florality:potted_scarlet_flax",
-    "florality:potted_obama_plant",
-    "florality:potted_felicia_daisy",
     "florality:potted_flame_orchid",
-    "florality:potted_gerbera_daisy",
-    "florality:potted_pink_allium",
     "florality:potted_pink_orchid"
   ]
 }
