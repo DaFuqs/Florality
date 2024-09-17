@@ -19,7 +19,15 @@ public class FloralityPlacedFeatures {
 	public static RegistryKey<PlacedFeature> HYDRANGEA = of("hydrangea");
 	public static RegistryKey<PlacedFeature> PURPLE_HYDRANGEA = of("purple_hydrangea");
 	public static RegistryKey<PlacedFeature> PINK_SWEETROCKET = of("pink_sweetrocket");
-	
+	public static RegistryKey<PlacedFeature> MAGENTA_SWEETROCKET = of("magenta_sweetrocket");
+	public static RegistryKey<PlacedFeature> PURPLE_SWEETROCKET = of("purple_sweetrocket");
+	public static RegistryKey<PlacedFeature> HOLLYHOCK = of("hollyhock");
+	public static RegistryKey<PlacedFeature> LARKSPUR = of("larkspur");
+	public static RegistryKey<PlacedFeature> BUTTERFLY_WEED = of("butterfly_weed");
+	public static RegistryKey<PlacedFeature> COSMOS = of("cosmos");
+	public static RegistryKey<PlacedFeature> GOLDEN_CROCUS = of("golden_crocus");
+	public static RegistryKey<PlacedFeature> CROCUSES = of("crocuses");
+	public static RegistryKey<PlacedFeature> SNOWDROPS = of("snowdrops");
 	
 	public static RegistryKey<PlacedFeature> SUNRISE_DAISY = of("sunrise_daisy");
 	public static RegistryKey<PlacedFeature> ALOE_VERA = of("aloe_vera");
@@ -42,7 +50,6 @@ public class FloralityPlacedFeatures {
 		BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.IS_FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, FUCHSIA);
 		
 		// More vanilla stuff
-		//BiomeModifications.addFeature(BiomeSelectors.tag(ConventionalBiomeTags.IS_BIRCH_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, PINK_TULIP);
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FLOWER_FOREST), GenerationStep.Feature.VEGETAL_DECORATION, VegetationPlacedFeatures.FLOWER_CHERRY);
 		BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, TreePlacedFeatures.MANGROVE_CHECKED);
 		BiomeModifications.addFeature(BiomeSelectors.tag(BiomeTags.IS_JUNGLE), GenerationStep.Feature.VEGETAL_DECORATION, BLUE_ORCHID);

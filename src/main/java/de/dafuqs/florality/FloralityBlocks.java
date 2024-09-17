@@ -33,23 +33,6 @@ public class FloralityBlocks {
 	}};
 	
 	public static List<SmallFlowerSet> SMALL_FLOWER_SETS = new ArrayList<>() {{
-		//add(new SmallFlowerSet("agleonema"));
-		//add(new SmallFlowerSet("black_eyed_susans"));
-		//add(new SmallFlowerSet("felicia_daisy"));
-		//add(new SmallFlowerSet("gerbera_daisy"));
-		//add(new SmallFlowerSet("harmonic_sprouts"));
-		//add(new SmallFlowerSet("himalayan_poppy"));
-		//add(new SmallFlowerSet("musical_mushroom"));
-		//add(new SmallFlowerSet("obama_plant"));
-		//add(new SmallFlowerSet("orange_dahlia"));
-		//add(new SmallFlowerSet("orange_globeflower"));
-		//add(new SmallFlowerSet("orange_lily"));
-		//add(new SmallFlowerSet("pink_allium"));
-		//add(new SmallFlowerSet("purple_lily"));
-		//add(new SmallFlowerSet("purple_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), false));
-		//add(new SmallFlowerSet("scarlet_flax"));
-		//add(new SmallFlowerSet("white_allium"));
-		//add(new SmallFlowerSet("white_periwinkle", new PeriwinkleBlock(StatusEffects.SPEED, 100, AbstractBlock.Settings.copy(Blocks.POPPY)), false));
 		add(new SmallFlowerSet("aloe_vera", new AloeVeraBlock(AbstractBlock.Settings.copy(Blocks.POPPY)), true));
 		add(new SmallFlowerSet("anthurium"));
 		add(new SmallFlowerSet("blue_hydrangea"));
@@ -72,11 +55,6 @@ public class FloralityBlocks {
 	}};
 	
 	public static List<TallFlowerSet> TALL_FLOWER_SETS = new ArrayList<>() {{
-		//add(new TallFlowerSet("blue_sage"));
-		//add(new TallFlowerSet("giant_hibiscus"));
-		//add(new TallFlowerSet("larkspur"));
-		//add(new TallFlowerSet("mountain_laurel"));
-		//add(new TallFlowerSet("purple_hibiscus"));
 		add(new TallFlowerSet("fuchsia"));
 		add(new TallFlowerSet("hollyhock"));
 		add(new TallFlowerSet("magenta_sweetrocket"));
